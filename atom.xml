@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Xiaochougege&#39;s Blog</title>
+  <icon>http://xiaochougege.github.io/icon.png</icon>
+  <subtitle>人醉梦亦碎</subtitle>
+  <link href="http://xiaochougege.github.io/atom.xml" rel="self"/>
   
-  
-  <link href="http://example.com/atom.xml" rel="self"/>
-  
-  <link href="http://example.com/"/>
+  <link href="http://xiaochougege.github.io/"/>
   <updated>2022-09-24T13:21:27.667Z</updated>
-  <id>http://example.com/</id>
+  <id>http://xiaochougege.github.io/</id>
   
   <author>
     <name>消愁哥哥</name>
@@ -18,23 +18,24 @@
   
   <entry>
     <title>Hello World!</title>
-    <link href="http://example.com/2022/09/24/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://example.com/2022/09/24/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</id>
+    <link href="http://xiaochougege.github.io/archives/undefined.html"/>
+    <id>http://xiaochougege.github.io/archives/undefined.html</id>
     <published>2022-09-24T13:16:19.000Z</published>
     <updated>2022-09-24T13:21:27.667Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我的第一篇博客!!!</p>]]></content>
-    
     
       
       
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
       
     
     
     
     
-    <category term="笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    <category term="笔记" scheme="http://xiaochougege.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
