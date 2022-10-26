@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>归档 |  人醉梦亦碎</title>
+      <title> 人醉梦亦碎</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -58,105 +58,173 @@
       
     <main class="content on">
       <section class="outer">
-  
-  <ul class="ads">
-    
-        <li>
-            <a href="">
-                <img src="" width="300" alt="">
-            </a>
-        </li>
-    
-        <li>
-            <a href="">
-                <img src="" width="300" alt="">
-            </a>
-        </li>
-    
-</ul>
-  
-  
-  <article class="articles">
-    
-    
-    <h1 class="page-type-title">归档</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2022" class="archive-year">2022</a>
+  <article
+  id="post-仿真实验1"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/archives/0.html" class="article-date">
+  <time datetime="2022-10-26T14:57:14.515Z" itemprop="datePublished">2022-10-26</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">565</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">1 分钟</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/archives/0.html" class="archive-article-date">
-  <time datetime="2022-10-26T14:57:14.515Z" itemprop="datePublished">10/26</time>
-</a>
       
 
-    </header>
-    
-    
-  </div>
-</article>
-      
+
+
   
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/archives/d957621e.html" class="archive-article-date">
-  <time datetime="2022-10-03T11:00:24.000Z" itemprop="datePublished">10/03</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/archives/d957621e.html"
-    >c primer plus 笔记(一)</a> 
-</h2>
+  <p>#模电仿真实验(1)<br>##设计目的<br>设计基本共射放大电路,让Ui被放大100倍后无失真输出.<br>##设计要求及内容<br>请基于基本共射放大电路结构,设计直流电源、各电阻、电容的参数，使ui被放大100倍后无失真输出。</p>
+<p>已知：ui为峰值1mV、频率1KHz正弦波，BJT型号为2N2222A，hFE&#x3D;220，直流电源电压不高于9V。<br>##仿真结果与分析</p>
+<ol>
+<li><img src="/2022-10-26-21-16-52.png"></li>
+<li>仿真实验图如上,由要求设计了阻容耦合共射放大电路,其中Rb为10k欧,RC为54.8欧,两个大电容分别为10nf.设计思路如下图所示:</li>
+<li><img src="/2022-10-26-21-37-26.png"></li>
+<li><img src="/2022-10-26-21-37-42.png"></li>
+<li>在Multisim中的仿真结果为下图:</li>
+<li><img src="/2022-10-26-21-38-53.png"></li>
+<li>其中输出端与输入端的对比为:</li>
+<li><img src="/2022-10-26-21-39-31.png"></li>
+<li>由仿真结果可知:放大倍数基本符合要求,失真率为0.173%,符合实验设计目的.</li>
+<li>##总结及感想</li>
+<li>1.本次设计的电路为阻容耦合共射放大电路,其中大电容起到了隔绝直流,导通交流的作用.如果不加大电容,输入端的交流信号会有所损耗,影响实验结果.同时对于直流通路来说,电容视为开路,隔绝了直流通路的影响;对于交流通路来说,电容视为短路,不对电路有所影响.电容阻抗为1&#x2F;jwC,因此电容越大越好.<br>2.分析放大电路时,应该遵守先静态后动态的原则,求静态工作点应该利用直流通路,求解动态参数应该利用交流通路.静态工作点应该在适合的范围才不会产生较大的失真.<br>3.对于三极管来说,实验过程中应该在工作在放大区,且Ubeq应该大于Uon,即0.7v.其中b-e端开启并正向偏置,c-e端反向偏置,确保三极管能正常作用.<br>4.Q点的确定可以用图解法.总结如下:<br><img src="/2022-10-26-22-09-49.png"><br>一般取Uceq&#x3D;1&#x2F;2Vcc.<br>5.通过本次仿真实验,对模电的知识重新进行了梳理,加强了放大电路设计的理解,有利于培养解决实际工程问题的能力,令我受益匪浅.</li>
+</ol>
  
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/archives/1c291ca3.html" class="archive-article-date">
-  <time datetime="2022-09-24T21:16:19.000Z" itemprop="datePublished">09/24</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/archives/1c291ca3.html"
-    >Hello World!</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
+      <!-- reward -->
       
     </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://xiaochougege.github.io/archives/0.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
   </div>
-  
-  
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/archives/d957621e.html" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">c primer plus 笔记(一)</div>
+      </a>
+    
+  </nav>
+
+   
+ 
+   
+<div class="gitalk" id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
+
+
+<script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
+
+
+<script src="https://cdn.staticfile.org/blueimp-md5/2.19.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    // id: location.pathname,      // Ensure uniqueness and length less than 50
+    id: md5(location.pathname),
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    pagerDirection: 'last'
+  })
+
+  gitalk.render('gitalk-container')
+</script>
 
   
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -295,6 +363,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
