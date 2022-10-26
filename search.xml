@@ -9,33 +9,4 @@
         <tag>笔记</tag>
       </tags>
   </entry>
-  <entry>
-    <title>c primer plus 笔记(一)</title>
-    <url>/archives/d957621e.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>##写在前面<br>大一开始的时候就在师兄的推荐下阅读了c primer plus这本书,起初看起来囫囵吞枣,庞大的知识量让我知难而退.随着跟着浙大翁恺老师的mooc慕课上完了c语言的基础和进阶后,发现自己还有知识没有弄懂.于是便重新翻起了这本书,非常好地解决了我的各种疑惑.确实,这本书更适合当作字典来进行阅读,直接硬啃还是有点小难受.凭借着极其详细和涉及一些底层知识的优点,我认为还是比较适合0基础自学入门的.<br><img src="https://cdn.jsdelivr.net/gh/xiaochougege/picture.bed@main/img/202210031120103.jpg" alt="Alt"><br>##</p>
-]]></content>
-      <tags>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/archives/0.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>#模电仿真实验(1)<br>##设计目的<br>设计基本共射放大电路,让Ui被放大100倍后无失真输出.<br>##设计要求及内容<br>请基于基本共射放大电路结构,设计直流电源、各电阻、电容的参数，使ui被放大100倍后无失真输出。</p>
-<p>已知：ui为峰值1mV、频率1KHz正弦波，BJT型号为2N2222A，hFE&#x3D;220，直流电源电压不高于9V。<br>##仿真结果与分析</p>
-<ol>
-<li><img src="/2022-10-26-21-16-52.png"></li>
-<li>仿真实验图如上,由要求设计了阻容耦合共射放大电路,其中Rb为10k欧,RC为54.8欧,两个大电容分别为10nf.设计思路如下图所示:</li>
-<li><img src="/2022-10-26-21-37-26.png"></li>
-<li><img src="/2022-10-26-21-37-42.png"></li>
-<li>在Multisim中的仿真结果为下图:</li>
-<li><img src="/2022-10-26-21-38-53.png"></li>
-<li>其中输出端与输入端的对比为:</li>
-<li><img src="/2022-10-26-21-39-31.png"></li>
-<li>由仿真结果可知:放大倍数基本符合要求,失真率为0.173%,符合实验设计目的.</li>
-<li>##总结及感想</li>
-<li>1.本次设计的电路为阻容耦合共射放大电路,其中大电容起到了隔绝直流,导通交流的作用.如果不加大电容,输入端的交流信号会有所损耗,影响实验结果.同时对于直流通路来说,电容视为开路,隔绝了直流通路的影响;对于交流通路来说,电容视为短路,不对电路有所影响.电容阻抗为1&#x2F;jwC,因此电容越大越好.<br>2.分析放大电路时,应该遵守先静态后动态的原则,求静态工作点应该利用直流通路,求解动态参数应该利用交流通路.静态工作点应该在适合的范围才不会产生较大的失真.<br>3.对于三极管来说,实验过程中应该在工作在放大区,且Ubeq应该大于Uon,即0.7v.其中b-e端开启并正向偏置,c-e端反向偏置,确保三极管能正常作用.<br>4.Q点的确定可以用图解法.总结如下:<br><img src="/2022-10-26-22-09-49.png"><br>一般取Uceq&#x3D;1&#x2F;2Vcc.<br>5.通过本次仿真实验,对模电的知识重新进行了梳理,加强了放大电路设计的理解,有利于培养解决实际工程问题的能力,令我受益匪浅.</li>
-</ol>
-]]></content>
-  </entry>
 </search>

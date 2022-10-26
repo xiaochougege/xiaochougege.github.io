@@ -6,7 +6,7 @@
   <link href="http://xiaochougege.github.io/atom.xml" rel="self"/>
   
   <link href="http://xiaochougege.github.io/"/>
-  <updated>2022-10-26T14:13:16.631Z</updated>
+  <updated>2022-10-02T08:07:07.954Z</updated>
   <id>http://xiaochougege.github.io/</id>
   
   <author>
@@ -15,50 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://xiaochougege.github.io/archives/0.html"/>
-    <id>http://xiaochougege.github.io/archives/0.html</id>
-    <published>2022-10-26T14:57:14.515Z</published>
-    <updated>2022-10-26T14:13:16.631Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>c primer plus 笔记(一)</title>
-    <link href="http://xiaochougege.github.io/archives/d957621e.html"/>
-    <id>http://xiaochougege.github.io/archives/d957621e.html</id>
-    <published>2022-10-03T11:00:24.000Z</published>
-    <updated>2022-10-03T03:53:53.889Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="笔记" scheme="http://xiaochougege.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
   
   <entry>
     <title>Hello World!</title>
