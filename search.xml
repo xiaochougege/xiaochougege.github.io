@@ -9,4 +9,31 @@
         <tag>笔记</tag>
       </tags>
   </entry>
+  <entry>
+    <title>模糊推理实验</title>
+    <url>/archives/8e6ea3ca.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>#实验一 模糊推理实验</p>
+<p>##组长:<br>##组员:丁少聪,洪炜钊,姜鹏,李越洋<br>##指导老师:陈云梅,王倩雪</p>
+<p>##一.实验目的<br>1.理解实验要求<br>2.通过操作步骤建立起模糊<br>3.通过对输入信息x和y在不同数值的情况下，观察z（洗涤时间)<br>4.理解隶属函数、模糊关系、模糊规则的关系<br>5.理解模糊推理的原理及特点,熟练应用模糊推理</p>
+<p>##二.实验内容<br>###1.洗衣机模糊推理系统实验<br>####实验步骤<br>把文件washmachine.fis保存在某文件夹，比如 c:\wash 。打开matlab软件，在“命令行窗口”输入命令，进入到保存上述washmachine.fis文件的文件夹。（用‘cd’命令）。<br>WashM&#x3D;readfis(‘washmachine.fis’); %模糊控制的模型已经初步建立，并保存在’washmachine.fis’文件中，通过‘readfis’命令读取并存放在WashM变量中<br>% 按照书本的模糊控制规则表，定义了9个对应的规则<br>rule1&#x3D;”dust&#x3D;&#x3D;SD &amp; gas&#x3D;&#x3D;NG &#x3D;&gt; washtime&#x3D;VS”;<br>rule2&#x3D;”dust&#x3D;&#x3D;SD &amp; gas&#x3D;&#x3D;MG &#x3D;&gt; washtime&#x3D;M”;<br>rule3&#x3D;”dust&#x3D;&#x3D;SD &amp; gas&#x3D;&#x3D;LG &#x3D;&gt; washtime&#x3D;L”;<br>rule4&#x3D;”dust&#x3D;&#x3D;MD &amp; gas&#x3D;&#x3D;NG &#x3D;&gt; washtime&#x3D;S”;<br>rule5&#x3D;”dust&#x3D;&#x3D;MD &amp; gas&#x3D;&#x3D;MG &#x3D;&gt; washtime&#x3D;M”;<br>rule6&#x3D;”dust&#x3D;&#x3D;MD &amp; gas&#x3D;&#x3D;LG &#x3D;&gt; washtime&#x3D;L”;<br>rule7&#x3D;”dust&#x3D;&#x3D;LD &amp; gas&#x3D;&#x3D;NG &#x3D;&gt; washtime&#x3D;M”;<br>rule8&#x3D;”dust&#x3D;&#x3D;LD &amp; gas&#x3D;&#x3D;MG &#x3D;&gt; washtime&#x3D;L”;<br>rule9&#x3D;”dust&#x3D;&#x3D;LD &amp; gas&#x3D;&#x3D;LG &#x3D;&gt; washtime&#x3D;VL”;<br>% 用‘addrule’命令，把以上9个规则增加到washmachine模型中<br>WashM&#x3D;addrule(WashM,rule9);<br>WashM&#x3D;addrule(WashM,rule5);<br>WashM&#x3D;addrule(WashM,rule1);<br>WashM&#x3D;addrule(WashM,rule2);<br>WashM&#x3D;addrule(WashM,rule3);<br>WashM&#x3D;addrule(WashM,rule4);<br>WashM&#x3D;addrule(WashM,rule6);<br>WashM&#x3D;addrule(WashM,rule7);<br>WashM&#x3D;addrule(WashM,rule8);<br>ruleview(WashM); %用‘ruleview’命令查看上述规则的结果，会弹出GUI界面<br>%在GUI界面左下方input框中以[x y]的形式输入污泥和油脂的数值，如[60 70],可以观察到右上方的washtime后面数值的变化。<br>%同样，输入不同的[x y]数值，观察washtime的变化<br>%也可以在GUI界面拉动dust 和 gas对应的红轴线，观察washtime数值的变化<br>%点击view菜单中surface，查看推论结果立体图<br>writefis(WashM,’newwashmachine.fis’);  %把最新更改后的WashM模型保存到文件’newwashmachine.fis’中<br>fuzzy(‘newwashmachine.fis’);  %用命令fuzzy查看该模型input和output的隶属函数的设定<br>####实验结果<br>1.假如污泥,油脂,洗涤时间论域为(0,100),(0,100),(0,120)此时的隶属函数图如下:</p>
+<p><img src="/2022-11-21-11-42-49.png"></p>
+<p><img src="/2022-11-21-11-43-13.png"></p>
+<p><img src="/2022-11-21-11-44-02.png"></p>
+<p>模糊控制规则表如下:</p>
+<p><img src="/2022-11-21-11-46-21.png"></p>
+<p>推论结果立体图如下:</p>
+<p><img src="/2022-11-21-11-48-05.png"></p>
+<p>2.假定传感器测得信息污泥&#x3D;60,油脂&#x3D;70,采用模糊决策,给出推理结果.</p>
+<p><img src="/2022-11-21-11-50-54.png"></p>
+<p><img src="/2022-11-21-11-52-52.png"><br>###2.树叶疾病程度认定系统</p>
+<p>利用模糊推理实现对树叶疾病程度认定的功能 </p>
+<p>运行文件代码得到的GUI界面如下:</p>
+<p><img src="/2022-11-21-12-02-31.png"><br>其中最右边两个按钮分别可以实现利用写好的模糊推理规则预测树叶生病的情况以及保存图片的功能.<br>最下面的cluster有5个选项分别选取树叶不同部位.<br>以下是举例的生病等级图:</p>
+<p><img src="/2022-11-21-12-07-15.png"></p>
+<p>##三.实验总结<br>###(1)心得<br>1.通过实验加深了对模糊逻辑的认识:经典二值逻辑中，通常以0表示“假”以1表示“真”，一个命题非真即假 。在模糊逻辑中，一个命题不再非真即假，它可以被认为是“部分的真” 。模糊逻辑取消二值之间非此即彼的对立，用隶属度表示二值间的过度状态 。模糊集合，是论域上的元素可以“部分地属于”集合A ,一个元素属于集合A的程度称为隶属度，模糊集合可用隶属度函数定义。</p>
+<p>2.通过实验加深了模糊推理的理解:模糊推理可以认为是一种不精确的推理，是通过模糊规则将给定输入转化为输出的过程。模糊推理是将输入的模糊集通过一定运算对应到特定输出模糊集的计算过程。模糊规则是在进行模糊推理时依赖的规则，通常可以用自然语言表述。</p>
+<p>3.同时,通过本次具体的实验,亲身感受模糊推理的魅力,让我对模糊推理的实际应用有了一定了解:模糊计算适用于：<br>（1）复杂且没有完整数学模型的非线性问题,可在不知晓具体模型的情况下利用经验规则求解。<br>（2）与其它智能算法结合实现优势互补,提供了将人类在识别、决策、理解等方面的模糊性引入机器及其控制的途径 。</p>
+<p>4.通过实验过程阅读源代码以及课外资料查询,对模糊推理的设计框架整体有了一个大概的认识:模糊推理系统由五个功能模块组成：<br>    (1).包含若干模糊if-then规则的规则库；<br>    (2).定义关于使用模糊if-then规则的模糊集的隶属度函数的数据库；<br>    (3).在规则上的执行推理操作的决策单元；<br>    (4).将明确输入转化为与语言价值匹配的程度的模糊界面；<br>    (5).将推理得到的模糊结果转化为明确输出的去模糊界面。</p>
+]]></content>
+  </entry>
 </search>
