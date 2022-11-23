@@ -6,7 +6,7 @@
   <link href="http://xiaochougege.github.io/atom.xml" rel="self"/>
   
   <link href="http://xiaochougege.github.io/"/>
-  <updated>2022-10-02T08:07:07.954Z</updated>
+  <updated>2022-11-23T05:36:22.858Z</updated>
   <id>http://xiaochougege.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>模糊推理实验</title>
+    <link href="http://xiaochougege.github.io/archives/8e6ea3ca.html"/>
+    <id>http://xiaochougege.github.io/archives/8e6ea3ca.html</id>
+    <published>2022-11-23T13:19:37.000Z</published>
+    <updated>2022-11-23T05:36:22.858Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="实验报告" scheme="http://xiaochougege.github.io/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World!</title>
