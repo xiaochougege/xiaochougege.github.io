@@ -125,10 +125,8 @@
 <li>保持其他参数不变，修改MaxEpochs的数值，观察并记录准确率的变化（MaxEpochs数值的修改在原文件的54-64行附近），并填写表格一。（表格中已填写数值为根据上图观察数据的示例）</li>
 </ol>
 <p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211271155198.png">   </p>
-<p>| 表格一| MaxEpochs| | | | | | | | |<br>|-|-|-|-|-|-|-|-|-|-|-|<br>| |1|2|3|4|5|6|7|8|9|<br>|最后一次训练准确率|60.16|89.84|79.69|83.59|85.16|83.59|82.81|83.59|88.28|<br>|测试准确率|57.14|91.8|80.357|83.929|89.286|91.071|91.071|92.857|92.857|<br>3. 把MaxEpochs的数值设置为2，并把 ,…,’Plots’,’training-progress’的字样删除，如下图所示：<br><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211271217301.png"></p>
-<pre><code>修改卷积神经网络架构定义中convolution2dLayer的第一个参数filterSize和第二个参数numFilters。（在卷积层中，第一个参数是 filterSize，它是训练函数在沿图像扫描时使用的卷积核的高度/宽度。在此示例中，数字 3 表示卷积核大小为 3×3。第二个参数是卷积核数量 numFilters，它是连接到同一输入区域的卷积核数量。此参数决定了特征图的数量。使用 &#39;Padding&#39; 名称-值对组对输入特征图进行填充。对于默认步幅为 1 的卷积层，&#39;same&#39; 填充可确保空间输出大小与输入大小相同。）
-</code></pre>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211271218203.png"></p>
+<p>|表格一| MaxEpochs|||||||||<br>|-|-|-|-|-|-|-|-|-|-|-|<br>| |1|2|3|4|5|6|7|8|9|<br>|最后一次训练准确率|60.16|89.84|79.69|83.59|85.16|83.59|82.81|83.59|88.28|<br>|测试准确率|57.14|91.8|80.357|83.929|89.286|91.071|91.071|92.857|92.857|<br>3. 把MaxEpochs的数值设置为2，并把 ,…,’Plots’,’training-progress’的字样删除，如下图所示：<br><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211271217301.png"></p>
+<p>修改卷积神经网络架构定义中convolution2dLayer的第一个参数filterSize和第二个参数numFilters。（在卷积层中，第一个参数是 filterSize，它是训练函数在沿图像扫描时使用的卷积核的高度&#x2F;宽度。在此示例中，数字 3 表示卷积核大小为 3×3。第二个参数是卷积核数量 numFilters，它是连接到同一输入区域的卷积核数量。此参数决定了特征图的数量。使用 ‘Padding’ 名称-值对组对输入特征图进行填充。对于默认步幅为 1 的卷积层，’same’ 填充可确保空间输出大小与输入大小相同。）<br><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211271218203.png"></p>
 <p>把设置两个参数不同的数值，把观察到的测试准确率的数值填到表格二中。（提示：你可以另外写一段代码，把filterSize和numFilters作为变量，写循环语句执行并记录最终结果到一个矩阵中）</p>
 <table>
 <thead>
