@@ -6,7 +6,7 @@
   <link href="http://xiaochougege.github.io/atom.xml" rel="self"/>
   
   <link href="http://xiaochougege.github.io/"/>
-  <updated>2022-11-27T08:39:59.736Z</updated>
+  <updated>2022-11-27T07:24:05.622Z</updated>
   <id>http://xiaochougege.github.io/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>基于深度学习的模式识别</title>
-    <link href="http://xiaochougege.github.io/archives/eef3c368.html"/>
-    <id>http://xiaochougege.github.io/archives/eef3c368.html</id>
-    <published>2022-11-27T15:19:36.000Z</published>
-    <updated>2022-11-27T08:39:59.736Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="实验报告" scheme="http://xiaochougege.github.io/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/"/>
-    
-  </entry>
   
   <entry>
     <title>算法求解八数码问题</title>
