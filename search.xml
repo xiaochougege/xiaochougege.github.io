@@ -325,4 +325,81 @@
         <tag>实验报告</tag>
       </tags>
   </entry>
+  <entry>
+    <title>我的markdown初笔记</title>
+    <url>/archives/cef00388.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="我的markdown笔记-x3D-x3D-一级标题-x3D-x3D"><a href="#我的markdown笔记-x3D-x3D-一级标题-x3D-x3D" class="headerlink" title="我的markdown笔记(&#x3D;&#x3D;一级标题&#x3D;&#x3D;)"></a>我的markdown笔记(&#x3D;&#x3D;一级标题&#x3D;&#x3D;)</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>&#x3D;&#x3D;(高亮)下面是分隔线&#x3D;&#x3D;</p>
+<hr>
+<p><strong>加粗(ctrl+B)</strong><br><em>斜体(ctrl+I)</em><br><del>删除线</del></p>
+<hr>
+<p>&#x3D;&#x3D;列表&#x3D;&#x3D;</p>
+<ul>
+<li><p>无序列表</p>
+<ul>
+<li>嵌套无序列表</li>
+<li>嵌套无序列表</li>
+</ul>
+</li>
+<li><p>无序列表</p>
+</li>
+<li><p>无序列表</p>
+</li>
+</ul>
+<ol>
+<li>有序列表</li>
+<li>有序列表</li>
+</ol>
+<hr>
+<blockquote>
+<p>引用<br>哈哈哈哈</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello world)</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><a href="https://zhihu.com/">知乎</a><br><img src="/%E5%9C%B0%E5%9D%80/%E5%9B%BE%E5%BA%8A%E9%93%BE%E6%8E%A5" alt="图片"></p>
+<hr>
+<p>&#x3D;&#x3D;表格&#x3D;&#x3D;</p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>哈哈</td>
+<td>哈哈哈</td>
+</tr>
+<tr>
+<td>哈哈哈</td>
+<td>哈哈</td>
+</tr>
+</tbody></table>
+<hr>
+<p>&#x3D;&#x3D;注释&#x3D;&#x3D;</p>
+<!-- 看不到的东东 -->
+
+<hr>
+<p>&#x3D;&#x3D;任务列表&#x3D;&#x3D;</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 已经完成的事 1</li>
+<li><input checked="" disabled="" type="checkbox"> 已经完成的事 2</li>
+<li><input checked="" disabled="" type="checkbox"> 已经完成的事 3</li>
+<li><input disabled="" type="checkbox"> 仍未完成的事 4</li>
+<li><input disabled="" type="checkbox"> 仍未完成的事 5</li>
+<li><input checked="" disabled="" type="checkbox"> 哈哈里面是英语字母x</li>
+</ul>
+<hr>
+<p>&#x3D;&#x3D;引用代码块&#x3D;&#x3D;</p>
+<figure class="highlight javascript"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">x，y</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> x + y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="code"><pre><span class="line">print(&#x27;hello&#x27; )</span><br><span class="line">print(&#x27;你好&quot;)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>&#x3D;&#x3D;自动表格对齐&#x3D;&#x3D;<br>&#x3D;&#x3D;shift + Alt + F&#x3D;&#x3D;</p>
+<hr>
+]]></content>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
 </search>
