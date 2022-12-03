@@ -328,7 +328,7 @@
   <entry>
     <title>我的markdown初笔记</title>
     <url>/archives/cef00388.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="我的markdown笔记-x3D-x3D-一级标题-x3D-x3D"><a href="#我的markdown笔记-x3D-x3D-一级标题-x3D-x3D" class="headerlink" title="我的markdown笔记(&#x3D;&#x3D;一级标题&#x3D;&#x3D;)"></a>我的markdown笔记(&#x3D;&#x3D;一级标题&#x3D;&#x3D;)</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>&#x3D;&#x3D;(高亮)下面是分隔线&#x3D;&#x3D;</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="我的markdown笔记-x3D-x3D-一级标题-x3D-x3D"><a href="#我的markdown笔记-x3D-x3D-一级标题-x3D-x3D" class="headerlink" title="我的markdown笔记( &#x3D;&#x3D;一级标题&#x3D;&#x3D; )"></a>我的markdown笔记( &#x3D;&#x3D;一级标题&#x3D;&#x3D; )</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>&#x3D;&#x3D;(高亮)下面是分隔线&#x3D;&#x3D;</p>
 <hr>
 <p><strong>加粗(ctrl+B)</strong><br><em>斜体(ctrl+I)</em><br><del>删除线</del></p>
 <hr>
@@ -357,7 +357,7 @@
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello world)</span></span><br></pre></td></tr></table></figure>
 
 <hr>
-<p><a href="https://zhihu.com/">知乎</a><br><img src="/%E5%9C%B0%E5%9D%80/%E5%9B%BE%E5%BA%8A%E9%93%BE%E6%8E%A5" alt="图片"></p>
+<p><a href="https://xiaochougege.github.io/">blog</a><br><img src="/%E5%9C%B0%E5%9D%80/%E5%9B%BE%E5%BA%8A%E9%93%BE%E6%8E%A5" alt="图片"></p>
 <hr>
 <p>&#x3D;&#x3D;表格&#x3D;&#x3D;</p>
 <table>
