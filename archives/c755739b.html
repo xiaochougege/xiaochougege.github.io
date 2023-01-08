@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>算法求解八数码问题 |  人醉梦亦碎</title>
+      <title>晶体管共射单管放大电路 |  人醉梦亦碎</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -59,7 +59,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-算法求解八数码问题"
+  id="post-模电实验1"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -70,7 +70,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  算法求解八数码问题
+  晶体管共射单管放大电路
 </h1>
  
 
@@ -78,15 +78,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/archives/ab13bcd7.html" class="article-date">
-  <time datetime="2022-11-25T23:29:36.000Z" itemprop="datePublished">2022-11-25</time>
+      <a href="/archives/c755739b.html" class="article-date">
+  <time datetime="2023-01-08T15:14:52.000Z" itemprop="datePublished">2023-01-08</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.1k</span>
+            <span class="post-count">2.2k</span>
         </span>
     </span>
 
@@ -95,7 +95,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">4 分钟</span>
+            <span class="post-count">7 分钟</span>
         </span>
     </span>
 </div>
@@ -110,91 +110,138 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>[top]</p>
-<h1 id="人工智能原理实验"><a href="#人工智能原理实验" class="headerlink" title=" 人工智能原理实验"></a><center> 人工智能原理实验</h1><h2 id="实验二-算法求解八数码问题"><a href="#实验二-算法求解八数码问题" class="headerlink" title=" 实验二 算法求解八数码问题"></a><center> 实验二 算法求解八数码问题</h2><h4 id="组长"><a href="#组长" class="headerlink" title="组长:"></a>组长:</h4><h4 id="组员"><a href="#组员" class="headerlink" title="组员:"></a>组员:</h4><h4 id="指导老师"><a href="#指导老师" class="headerlink" title="指导老师:"></a>指导老师:</h4><h2 id="一-实验目的"><a href="#一-实验目的" class="headerlink" title="一.实验目的"></a>一.实验目的</h2><ol>
-<li>熟悉与掌握启发式搜索的定义,估计函数与算法过程;</li>
-<li>利用算法求解八数码难题;</li>
-<li>理解求解流程与搜索顺序;</li>
-<li>了解八数码的估价函数所起到的作用;</li>
-<li>学习如何设计八数码的估价函数;</li>
+  <h1 id="实验一-晶体管共射单管放大电路"><a href="#实验一-晶体管共射单管放大电路" class="headerlink" title="实验一 晶体管共射单管放大电路"></a><center>实验一 晶体管共射单管放大电路</h1><h2 id="一-实验目的"><a href="#一-实验目的" class="headerlink" title="一.实验目的"></a>一.实验目的</h2><ol>
+<li>掌握放大电路静态工作点的测量与调试方法,了结静态工作点对放大电炉性能的影响.</li>
+<li>掌握放大电路放大倍数,输入电阻,输出电阻的测试方法.</li>
+<li>熟悉常用的电子仪器及试验设备的使用.</li>
 </ol>
-<h2 id="二-实验内容"><a href="#二-实验内容" class="headerlink" title="二.实验内容"></a>二.实验内容</h2><h3 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h3><ol>
-<li>把rar中所有文件解压到硬盘某文件夹</li>
-<li>在matlab环境下进入该文件夹</li>
-<li>执行命令 bashuma </li>
-<li>代码会自动运行并观察结果尝试改变初始状态 initMatrix ，（在bashuma.m 文件中第34行附近）运行并观察命令窗口的输出的不同，观察软件运行的时间，观indexListopenList&#x2F; closeList 的长度的变化。 也可以用 % 符号把32-34行都加注注释，这样initMatrix的结果由31行的随机函数来决定；观察输出的不同。</li>
-<li>把34行恢复非注释状态。</li>
-<li>打开文件calH.m观察到calH( )函数调用了calH1( )函数。尝试改变代码，让calH( )函数调用calH0( )函数，运行程序 (执行命令 bashuma) ，观察软件运行时间。</li>
-<li>上述calH1( )函数实际上是书本122页例5.7中所描述的第1种估价函数（针对 h(n)的估价）。尝试按照书本描述，编写第2-4种估价函数，分别命名为calH2( ) &#x2F; calH3( ) &#x2F; calH4( )  。改变代码，让calH( )函数调用上述估价函数，观察软件运行时间的变化。</li>
-</ol>
-<h3 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h3><h4 id="一"><a href="#一" class="headerlink" title="一"></a>一</h4><ol>
-<li>当保留32行代码即initMatrix为:initMatrix() &#x3D; [ 4     1     3     0     8     5     7     6     2]时,<br>输出结果如下:</li>
-</ol>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252333864.png"></p>
-<ol start="2">
-<li>当保留33行代码即initMatrix为:initMatrix() &#x3D; [ 8     1     0     5     7     2     6     3     4]时,<br>输出结果如下:</li>
-</ol>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252334183.png"></p>
-<ol start="3">
-<li>当保留34行代码即initMatrix为:initMatrix() &#x3D; [ 4     1     5     3     8     7     6     0     2]时,<br>输出结果如下:</li>
-</ol>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252334604.png"></p>
-<ol start="4">
-<li>当32,33,34行代码注释,使用随机函数时:</li>
-</ol>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252335036.png">   </p>
-<p>在这个的过程中可以非常明显地发现34行的运行速度最且indexListopenList&#x2F; closeList 的长度最短.其它两行运行速度均较长,indexListopenList&#x2F; closeList 的长度较大.</p>
-<h4 id="二"><a href="#二" class="headerlink" title="二"></a>二</h4><p>让calH( )函数调用calH0( )函数,此时输出结果为:<br><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252335710.png"></p>
-<p>通过比较可知calH0()与calH1()相比,运行速度慢很多.</p>
-<h4 id="三"><a href="#三" class="headerlink" title="三"></a>三</h4><p>自定义以下calH()函数:</p>
-<ol>
-<li>calH2():估价函数时各数码转移到目的位置所需移动的距离的总和.此时代码和输出如下:</li>
-</ol>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252336978.png"></p>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252336710.png"></p>
-<ol start="2">
-<li>calH3():估价函数对每一对逆转数码乘以一个倍数.此时代码和输出如下:</li>
-</ol>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252337965.png"></p>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252337941.png"></p>
-<ol start="3">
-<li>calH4():估价函数的位置不符合的数码总和与3倍数码逆转数目相加.代码和输出如下:</li>
-</ol>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252337579.png"></p>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252338668.png"></p>
-<p>制表如下:</p>
+<h2 id="二-实验设备"><a href="#二-实验设备" class="headerlink" title="二. 实验设备"></a>二. 实验设备</h2><ul>
+<li>常用电子设备: 示波器,函数信号发生器,直流稳压电源.</li>
+<li>仿真元件: 2N222A,电解电容,电阻等.</li>
+</ul>
+<h2 id="三-实验原理"><a href="#三-实验原理" class="headerlink" title="三. 实验原理"></a>三. 实验原理</h2><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212240903069.png"/>
+
+<h2 id="四-基础型实验"><a href="#四-基础型实验" class="headerlink" title="四.基础型实验"></a>四.基础型实验</h2><ul>
+<li>检查三极管的好坏；</li>
+<li>调直流稳压电源，得到+12V的电源（以万用表显示值为准，注意电源地、信号地、电路地 要接在一起）；</li>
+<li>按电路图连线；</li>
+</ul>
+<p><strong>测静态工作点，UBQ、UCQ和UEQ，完成下表；</strong><br> 交流输入置零短路，用直流电压表测量UBQ、UCQ、 UEQ得到：<br> <img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212240907875.png"/><br>仿真结果图如下:<br><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212242020457.png"/></p>
+<p> |实测|-|-|计算|-|-|-|<br> |-|-|-|-|-|-|-|-|-|<br> |Ubq&#x2F;V|Ucq&#x2F;V|Ueq&#x2F;V|Ieq&#x2F;mA|Icq&#x2F;mA|Ubeq&#x2F;V|Uceq&#x2F;V|<br> |2.39 | 9.88|1.77 | 1.58 |0.64  |0.62  |8.11 | | </p>
+<p><strong>动态性能测试</strong></p>
+<ul>
+<li>调整信号发生器，得到50mv(Vpp，以示波器显示值为准)，频率1kHz的正弦信号，接入 A 点<br>① 绘制输入输出信号波形<br>用示波器两个通道分别观察输入和输出信号波形(幅值、相位)，完成绘图。<br>② 测量电压放大倍数Au<br>  根据示波器显示值，记录 Ui和Uo（有效值），并数据记录在下表中；<br>Au&#x3D;Uo&#x2F;Ui<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212242037807.png"/>
+<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212242028153.png"/>
+<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212242036123.png"/></li>
+</ul>
 <table>
 <thead>
 <tr>
-<th>calh()</th>
-<th>时间</th>
+<th>负载电阻</th>
+<th>射极旁路电阻</th>
+<th>Ui&#x2F;mv</th>
+<th>Uo&#x2F;mv</th>
+<th>Au实测</th>
+<th>波形</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>calH0()</td>
-<td>494.753</td>
+<td>无</td>
+<td>接入Ce</td>
+<td>17.27</td>
+<td>0.353</td>
+<td>20.332</td>
+<td>正弦波</td>
 </tr>
 <tr>
-<td>calH1()</td>
-<td>2.997</td>
+<td>Rl</td>
+<td>接入Ce</td>
+<td>17.31</td>
+<td>0.177</td>
+<td>10.17</td>
+<td>正弦波</td>
 </tr>
 <tr>
-<td>calH2()</td>
-<td>39.616</td>
-</tr>
-<tr>
-<td>calH3()</td>
-<td>58.463</td>
-</tr>
-<tr>
-<td>calH4()</td>
-<td>2.067</td>
+<td>无</td>
+<td>无</td>
+<td>17.27</td>
+<td>0.038</td>
+<td>2.144</td>
+<td>正弦波</td>
 </tr>
 </tbody></table>
-<h2 id="实验总结"><a href="#实验总结" class="headerlink" title="实验总结"></a>实验总结</h2><h3 id="1-心得"><a href="#1-心得" class="headerlink" title="(1)心得"></a>(1)心得</h3><ol>
-<li>通过本次八数码实验,加深了我对启发式搜索与估价函数的了解.由书本定义可知:启发式搜索就是在状态空间中的搜索对每一个搜索的位置进行评估，得到最好的位置，再从这个位置进行搜索直到目标。这样可以省略大量无畏的搜索路径，提到了效率。在启发式搜索中，对位置的估价是十分重要的。采用了不同的估价可以有不同的效果. </li>
-<li>通过实验让我对股价函数有了深一层次的认识: 启发中的估价是用估价函数表示的，如：f(n) &#x3D; g(n) +h(n)其中f(n) 是节点n的估价函数，g(n)是在状态空间中从初始节点到n节点的实际代价，h(n)是从n到目标节点最佳路径的估计代价。 在此八数码问题中，显然g(n)就是从初始状态变换到当前状态所移动的步数，估计函数f(n)我们就可采用当前状态各个数字牌不在目标状态未知的个数，即错位数.</li>
-<li>由自行设计的calH()函数在实验结果可知:当估价函数将位置不符合的数码数目总和与3倍数码逆转数目相加时,这种情况克服了数码逆转数目的策略的局限,速度相对非常快.</li>
+<h2 id="五-设计型实验"><a href="#五-设计型实验" class="headerlink" title="五. 设计型实验"></a>五. 设计型实验</h2><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212240923608.png"/>
+<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212240924006.png"/>
+
+<ul>
+<li><strong>Ri</strong>:<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212242048351.jpg"/></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Vs</th>
+<th>Vi</th>
+<th>R1</th>
+<th>Ri</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>17.6</td>
+<td>15.3</td>
+<td>1</td>
+<td>7227.273</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>Ro</strong>:<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212242049243.jpg"/></li>
+</ul>
+<p>|Vo|Vl|Rl|Ro|<br>|–|–|–|–|–|<br>|309|250|10|2350.422|</p>
+<h2 id="六-实验思考"><a href="#六-实验思考" class="headerlink" title="六. 实验思考"></a>六. 实验思考</h2><ol>
+<li>为什么晶体管放大电路静态工作点设置不合理时，将会产生饱和失真或截止失真?</li>
+</ol>
+<ul>
+<li>静态工作点，该点习惯上称为静态工作点Q ；若静态工作点设置的不合适，在对交流信号放大时就可能会出现饱和失真（静态工作点偏高）或截止失真（静态工作点偏低）；当Q点过低时，在输入信号负半周靠近峰值的某段时间内，晶体管b-e间电压总量小于其开启电压，此时，晶体管截止，因此，基极电流将产生底部失真，即截止失真；三极管放大电路的静态工作点设置过低，即Q点过低，所以此时产生的失真是截止失真。</li>
+<li>设置静态工作点，主要就是为了保证在被放大的交流信号加入电路时，不论是正半周还是负半周都能满足发射结正向偏置，集电结反向偏置的三极管放大状态。</li>
+<li>如果静态工作点靠上，导致id过大，产生饱和失真。靠下，Ude过大，截止失真。</li>
+<li>饱和失真：指放大电路在动态情况下，工作点已有一部分进入饱和区而引起的失真。</li>
+<li>截止失真：指放大电路在动态情况下，工作点已有一部分进入截止区而引起的失真。因此静态工作点设置不合理导致了工作点进入了饱和区或者截止区。</li>
+</ul>
+<ol start="2">
+<li>晶体管单级放大电路希望提高信号不失真放大倍数，可以采用什么方法?</li>
+</ol>
+<ul>
+<li>更换更好的三极管;</li>
+<li>适当减小集电极电流、增大集电极电阻，增大两者之间的比值;</li>
+<li>适当引入一定的负反馈;</li>
+</ul>
+<ol start="3">
+<li>为什么晶体管单级放大电路负载放大倍数比空载时低?<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212242111454.png"/></li>
+</ol>
+<ul>
+<li>由图可知,发射极放大电路的电压增益系数（放大倍数），等于输出电压Uout与 输入电压Uin的比值。 静态工作点确定以后，三极管的输入阻抗就确定了，这里设为Rin，则输 入电流 Iin&#x3D;Uin&#x2F; Rin 集电极输出电流 Iout &#x3D; β.Iin 输出电压 Uout &#x3D; Iout ·Rc或Uout &#x3D; Iout* RC•RL (无负载RL) (有负载RL) Rc+RL 综上，电压增益系数 Au &#x3D; Uout β Rc（无负载RL) &#x2F; Uin Rin 或者 Uout β Rc▪RL Au &#x3D; (有负载RL) Uin Rin Rc+RL 可见，静态工作点确定之后，基极输入阻抗Rin为定值，三极管电流放大 系数β也为定值，因此电压放大系数就由集电极负载阻抗决定。输出空载(没有RL）时，集电极负载阻抗只有Rc；输出接负载RL时，集电极负载阻抗为Rc 和RL的并联值。 由于Rc和RL的并联值比Rc小，因此，接负载后，电压放大系数降低。</li>
+</ul>
+<ol start="4">
+<li>实际中希望晶体管单级放大电路的输入电阻是高还是低？希望输出电阻是高还是低？为什么？</li>
+</ol>
+<ul>
+<li>我觉得输入电阻越大越好,输出电阻越小越好.理由如下:<ul>
+<li>放大电路的输出电阻的大小，反映了放大电路带负载能力的强弱.输出电阻越小，放大电路带负载能力越强.因此输出电阻尽量小一些为好。</li>
+<li>在一定电压下，输出电流越大，就是负载能力越强。而需要输出电流越大，就需要输出电路中的电阻越小。</li>
+<li>输入阻抗越大，信号源的信号基本上能全部落到晶体管上，不至于被信号源的内阻消耗掉</li>
+<li>输入电阻越大，就表明放大电路从信号源索取的电流越小，放大电路得到的输入电压越接近信号源电压，即信号源内阻上的电压就越小，信号电压损失越小</li>
+</ul>
+</li>
+</ul>
+<ol start="5">
+<li>若将CE断开，该电路的Au、Ri和Ro将如何变化，为什么？<br>由上述实验可知,未接负载时,断开Ce,Au降低,因为Au与输入输出电阻比值有关,所以可以明显看到分子应该变小,分母应该变大,即Ri变大,Ro变小,Au变小.实际仿真如下:<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212242127237.jpg"/>
+可以看出推断基本正确.</li>
+</ol>
+<h2 id="七-实验总结与实验讨论"><a href="#七-实验总结与实验讨论" class="headerlink" title="七. 实验总结与实验讨论"></a>七. 实验总结与实验讨论</h2><ol>
+<li>设置静态工作点，主要就是为了保证在被放大的交流信号加入电路时，不论是正半周还是负半周都能满足发射结正向偏置，集电结反向偏置的三极管放大状态。</li>
+<li>饱和失真：指放大电路在动态情况下，工作点已有一部分进入饱和区而引起的失真。截止失真：指放大电路在动态情况下，工作点已有一部分进入截止区而引起的失真。因此静态工作点设置不合理导致了工作点进入了饱和区或者截止区。</li>
+<li>放大倍数计算方法: Usm的输入正弦电压信号，测输出电压幅度Uom，保证不出现截止或削顶失真，比值Uom&#x2F;Usm即是放大器电压放大倍数。输入电阻为Ri，信号源内阻为Rs。信号源空载，测量其正弦电压的有效值Es或幅度Esm。再加到放大器输入端子上，测量放大器输入端子的电压有效值Ui或幅度Uim则根据电阻串联分压原理有Ri&#x2F;(Rs+Ri)Es&#x3D;Ui，由此计算Ri&#x3D;Ui&#x2F;(Es-Ui)Rs;放大器输出电阻为Ro，其空载输出正弦电压的有效值Eo或幅度Eom。再加阻值为RL的负载。测量输出正弦电压的有效值变为Uo或幅度Uom则根据电阻串联分压原理有RL&#x2F;(Ro+RL)Eo&#x3D;Uo，由此计算Ro&#x3D;(Eo&#x2F;Uo-1)RL.</li>
+<li>当输入电阻很大时，那么只要一个电流很小的信号就可以得到很高的电压，从而放大。因为输入端得到的电流很小，所以对于信号源来说，就降低了信号源的负担。当输出电阻很小时，在输出电压不变的情况下，可以得到很大的电流，很大的电流可以很容易的去推动负载工作。</li>
+<li>本次实验是这学期唯一一次线下实验,可惜我当初的实验报告忘记带回家,实验数据遗失,但是通过仿真实验,我也进一步加强了仿真操作能力与电路分析能力.通过本次实验,加深了我对三极管共射放大电路的理解与静态工作点的计算测量能力.</li>
 </ol>
  
       <!-- reward -->
@@ -248,7 +295,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://xiaochougege.github.io/archives/ab13bcd7.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://xiaochougege.github.io/archives/c755739b.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -261,19 +308,19 @@
    
   <nav class="article-nav">
     
-      <a href="/archives/eef3c368.html" class="article-nav-link">
+      <a href="/archives/3823b3cb.html" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            基于深度学习的模式识别
+            两级阻容耦合交流放大电路
           
         </div>
       </a>
     
     
-      <a href="/archives/8e6ea3ca.html" class="article-nav-link">
+      <a href="/archives/cef00388.html" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">模糊推理实验</div>
+        <div class="article-nav-title">我的markdown初笔记</div>
       </a>
     
   </nav>

@@ -6,7 +6,7 @@
   <link href="http://xiaochougege.github.io/atom.xml" rel="self"/>
   
   <link href="http://xiaochougege.github.io/"/>
-  <updated>2022-12-01T13:55:58.421Z</updated>
+  <updated>2023-01-08T07:29:16.687Z</updated>
   <id>http://xiaochougege.github.io/</id>
   
   <author>
@@ -15,6 +15,121 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>集成运放的综合运用</title>
+    <link href="http://xiaochougege.github.io/archives/27cd9de6.html"/>
+    <id>http://xiaochougege.github.io/archives/27cd9de6.html</id>
+    <published>2023-01-08T15:16:34.000Z</published>
+    <updated>2023-01-08T07:29:16.687Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="实验报告" scheme="http://xiaochougege.github.io/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>负反馈放大电路</title>
+    <link href="http://xiaochougege.github.io/archives/5f96c0e5.html"/>
+    <id>http://xiaochougege.github.io/archives/5f96c0e5.html</id>
+    <published>2023-01-08T15:16:10.000Z</published>
+    <updated>2023-01-08T07:29:00.304Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="实验报告" scheme="http://xiaochougege.github.io/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>差动直流放大电路</title>
+    <link href="http://xiaochougege.github.io/archives/272fc84.html"/>
+    <id>http://xiaochougege.github.io/archives/272fc84.html</id>
+    <published>2023-01-08T15:15:44.000Z</published>
+    <updated>2023-01-08T07:28:39.780Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="实验报告" scheme="http://xiaochougege.github.io/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>两级阻容耦合交流放大电路</title>
+    <link href="http://xiaochougege.github.io/archives/3823b3cb.html"/>
+    <id>http://xiaochougege.github.io/archives/3823b3cb.html</id>
+    <published>2023-01-08T15:15:24.000Z</published>
+    <updated>2023-01-08T07:28:23.784Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="实验报告" scheme="http://xiaochougege.github.io/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>晶体管共射单管放大电路</title>
+    <link href="http://xiaochougege.github.io/archives/c755739b.html"/>
+    <id>http://xiaochougege.github.io/archives/c755739b.html</id>
+    <published>2023-01-08T15:14:52.000Z</published>
+    <updated>2023-01-08T07:27:44.716Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="实验报告" scheme="http://xiaochougege.github.io/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>我的markdown初笔记</title>

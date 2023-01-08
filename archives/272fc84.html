@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>算法求解八数码问题 |  人醉梦亦碎</title>
+      <title>差动直流放大电路 |  人醉梦亦碎</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -59,7 +59,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-算法求解八数码问题"
+  id="post-模电实验3"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -70,7 +70,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  算法求解八数码问题
+  差动直流放大电路
 </h1>
  
 
@@ -78,15 +78,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/archives/ab13bcd7.html" class="article-date">
-  <time datetime="2022-11-25T23:29:36.000Z" itemprop="datePublished">2022-11-25</time>
+      <a href="/archives/272fc84.html" class="article-date">
+  <time datetime="2023-01-08T15:15:44.000Z" itemprop="datePublished">2023-01-08</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.1k</span>
+            <span class="post-count">2.2k</span>
         </span>
     </span>
 
@@ -95,7 +95,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">4 分钟</span>
+            <span class="post-count">8 分钟</span>
         </span>
     </span>
 </div>
@@ -110,91 +110,251 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>[top]</p>
-<h1 id="人工智能原理实验"><a href="#人工智能原理实验" class="headerlink" title=" 人工智能原理实验"></a><center> 人工智能原理实验</h1><h2 id="实验二-算法求解八数码问题"><a href="#实验二-算法求解八数码问题" class="headerlink" title=" 实验二 算法求解八数码问题"></a><center> 实验二 算法求解八数码问题</h2><h4 id="组长"><a href="#组长" class="headerlink" title="组长:"></a>组长:</h4><h4 id="组员"><a href="#组员" class="headerlink" title="组员:"></a>组员:</h4><h4 id="指导老师"><a href="#指导老师" class="headerlink" title="指导老师:"></a>指导老师:</h4><h2 id="一-实验目的"><a href="#一-实验目的" class="headerlink" title="一.实验目的"></a>一.实验目的</h2><ol>
-<li>熟悉与掌握启发式搜索的定义,估计函数与算法过程;</li>
-<li>利用算法求解八数码难题;</li>
-<li>理解求解流程与搜索顺序;</li>
-<li>了解八数码的估价函数所起到的作用;</li>
-<li>学习如何设计八数码的估价函数;</li>
-</ol>
-<h2 id="二-实验内容"><a href="#二-实验内容" class="headerlink" title="二.实验内容"></a>二.实验内容</h2><h3 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h3><ol>
-<li>把rar中所有文件解压到硬盘某文件夹</li>
-<li>在matlab环境下进入该文件夹</li>
-<li>执行命令 bashuma </li>
-<li>代码会自动运行并观察结果尝试改变初始状态 initMatrix ，（在bashuma.m 文件中第34行附近）运行并观察命令窗口的输出的不同，观察软件运行的时间，观indexListopenList&#x2F; closeList 的长度的变化。 也可以用 % 符号把32-34行都加注注释，这样initMatrix的结果由31行的随机函数来决定；观察输出的不同。</li>
-<li>把34行恢复非注释状态。</li>
-<li>打开文件calH.m观察到calH( )函数调用了calH1( )函数。尝试改变代码，让calH( )函数调用calH0( )函数，运行程序 (执行命令 bashuma) ，观察软件运行时间。</li>
-<li>上述calH1( )函数实际上是书本122页例5.7中所描述的第1种估价函数（针对 h(n)的估价）。尝试按照书本描述，编写第2-4种估价函数，分别命名为calH2( ) &#x2F; calH3( ) &#x2F; calH4( )  。改变代码，让calH( )函数调用上述估价函数，观察软件运行时间的变化。</li>
-</ol>
-<h3 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h3><h4 id="一"><a href="#一" class="headerlink" title="一"></a>一</h4><ol>
-<li>当保留32行代码即initMatrix为:initMatrix() &#x3D; [ 4     1     3     0     8     5     7     6     2]时,<br>输出结果如下:</li>
-</ol>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252333864.png"></p>
-<ol start="2">
-<li>当保留33行代码即initMatrix为:initMatrix() &#x3D; [ 8     1     0     5     7     2     6     3     4]时,<br>输出结果如下:</li>
-</ol>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252334183.png"></p>
-<ol start="3">
-<li>当保留34行代码即initMatrix为:initMatrix() &#x3D; [ 4     1     5     3     8     7     6     0     2]时,<br>输出结果如下:</li>
-</ol>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252334604.png"></p>
-<ol start="4">
-<li>当32,33,34行代码注释,使用随机函数时:</li>
-</ol>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252335036.png">   </p>
-<p>在这个的过程中可以非常明显地发现34行的运行速度最且indexListopenList&#x2F; closeList 的长度最短.其它两行运行速度均较长,indexListopenList&#x2F; closeList 的长度较大.</p>
-<h4 id="二"><a href="#二" class="headerlink" title="二"></a>二</h4><p>让calH( )函数调用calH0( )函数,此时输出结果为:<br><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252335710.png"></p>
-<p>通过比较可知calH0()与calH1()相比,运行速度慢很多.</p>
-<h4 id="三"><a href="#三" class="headerlink" title="三"></a>三</h4><p>自定义以下calH()函数:</p>
+  <h1 id="实验三-差动直流放大电路"><a href="#实验三-差动直流放大电路" class="headerlink" title="实验三  差动直流放大电路"></a><center>实验三  差动直流放大电路</h1><hr>
+<h2 id="一-实验目的"><a href="#一-实验目的" class="headerlink" title="一. 实验目的"></a>一. 实验目的</h2><pre><code>  1、熟悉差动直流放大器的工作原理，了解差动放大器的性能与特点。
+  2、掌握差动直流放大器的基本调试方法。
+  3、学习测量差动直流放大器的电压放大倍数、共模抑制比的方法。
+</code></pre>
+<h2 id="二-实验步骤"><a href="#二-实验步骤" class="headerlink" title="二. 实验步骤"></a>二. 实验步骤</h2><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212241127043.png"/>
+
+
 <ol>
-<li>calH2():估价函数时各数码转移到目的位置所需移动的距离的总和.此时代码和输出如下:</li>
+<li><p>实验前的准备工作；检查三极管、导线；</p>
+</li>
+<li><p>调制+12V、-12V两路直流电压；</p>
+</li>
+<li><p>测量Q点；① 调零（保证 零输入-零输出）；② Re1、恒流源分别接入电路，测Q点；完成相关表格；</p>
+</li>
+<li><p>测量直流差模电压放大倍数；将 电源地、信号地 、电路地 相连<br>     ①双端输入：用模拟电路实验箱的交直流差模信号源 I 和 II 产生 0.1V 和 -0.1V 的一对差模信号，分别接入Ui1和Ui2，在差分电路射极分别接入恒流源和Re1的两种情况下，分别用万用表直流电压档测量输出电压，完成相关表格；<br>     ②单端输入：用交直流差模信号源 I 产生 +0.2V 直流电压，接入b1（Ui1），b2 接地（Ui2 置零），差分电路射极接恒流源，测量输出电压，完成相关表格；</p>
+</li>
+<li><p>测量直流共模电压放大倍数；<br>     将交直流差模信号源I 依次产生 +0.1V 和 -0.1V 直流电压，接入Ui1和Ui2（共模输入），在差分电路射极分别接入恒流源和Re1的两种情况下，分别测量输出电压，完成相关表格；</p>
+</li>
+<li><p>测量交流信号单端输入、单端输出时电压放大倍数；（示波器测量）<br>     产生1kHz，Up-p &#x3D; 0.15V  正弦波，接入 Ui1，且 b2接地，示波器CH1通道测量单端输入电压，CH2通道测量单端输出电压，完成相关表格；<br>     CH1&amp;CH2：交流耦合、平均采样、波形显示合适</p>
+</li>
 </ol>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252336978.png"></p>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252336710.png"></p>
-<ol start="2">
-<li>calH3():估价函数对每一对逆转数码乘以一个倍数.此时代码和输出如下:</li>
-</ol>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252337965.png"></p>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252337941.png"></p>
-<ol start="3">
-<li>calH4():估价函数的位置不符合的数码总和与3倍数码逆转数目相加.代码和输出如下:</li>
-</ol>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252337579.png"></p>
-<p><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202211252338668.png"></p>
-<p>制表如下:</p>
+<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212241128849.png"/>
+<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212241129461.png"/>
+
+<h2 id="三-数据处理："><a href="#三-数据处理：" class="headerlink" title="三. 数据处理："></a>三. 数据处理：</h2><ul>
+<li>静态工作点</li>
+</ul>
+<p>仿真原理图如下:<br><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212301141347.jpg"/><br><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212301116737.png"/></p>
+<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212301625516.png"/>
+
+<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212301626889.png"/>
+
+<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212301626655.png"/>
+----
+<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212301627938.png"/>
+
+<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212301628755.png"/>
+
 <table>
 <thead>
 <tr>
-<th>calh()</th>
-<th>时间</th>
+<th>对地电压</th>
+<th>Ucq1</th>
+<th>Ucq2</th>
+<th>Ucq3</th>
+<th>Ubq1</th>
+<th>Ubq2</th>
+<th>Ubq3</th>
+<th>Ueq1</th>
+<th>Ueq2</th>
+<th>Ueq3</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>calH0()</td>
-<td>494.753</td>
+<td>接恒流源</td>
+<td>6.264</td>
+<td>6.264</td>
+<td>-747.185m</td>
+<td>-265.928p</td>
+<td>-265.928p</td>
+<td>-7.895</td>
+<td>-611.73m</td>
+<td>-611.73m</td>
+<td>-8.526</td>
 </tr>
 <tr>
-<td>calH1()</td>
-<td>2.997</td>
-</tr>
-<tr>
-<td>calH2()</td>
-<td>39.616</td>
-</tr>
-<tr>
-<td>calH3()</td>
-<td>58.463</td>
-</tr>
-<tr>
-<td>calH4()</td>
-<td>2.067</td>
+<td>接电阻Re1</td>
+<td>6.4</td>
+<td>6.4</td>
+<td>-11.21</td>
+<td>-259.36p</td>
+<td>-259.36p</td>
+<td>-10.615</td>
+<td>-611.081m</td>
+<td>-611..081m</td>
+<td>-11.225</td>
 </tr>
 </tbody></table>
-<h2 id="实验总结"><a href="#实验总结" class="headerlink" title="实验总结"></a>实验总结</h2><h3 id="1-心得"><a href="#1-心得" class="headerlink" title="(1)心得"></a>(1)心得</h3><ol>
-<li>通过本次八数码实验,加深了我对启发式搜索与估价函数的了解.由书本定义可知:启发式搜索就是在状态空间中的搜索对每一个搜索的位置进行评估，得到最好的位置，再从这个位置进行搜索直到目标。这样可以省略大量无畏的搜索路径，提到了效率。在启发式搜索中，对位置的估价是十分重要的。采用了不同的估价可以有不同的效果. </li>
-<li>通过实验让我对股价函数有了深一层次的认识: 启发中的估价是用估价函数表示的，如：f(n) &#x3D; g(n) +h(n)其中f(n) 是节点n的估价函数，g(n)是在状态空间中从初始节点到n节点的实际代价，h(n)是从n到目标节点最佳路径的估计代价。 在此八数码问题中，显然g(n)就是从初始状态变换到当前状态所移动的步数，估计函数f(n)我们就可采用当前状态各个数字牌不在目标状态未知的个数，即错位数.</li>
-<li>由自行设计的calH()函数在实验结果可知:当估价函数将位置不符合的数码数目总和与3倍数码逆转数目相加时,这种情况克服了数码逆转数目的策略的局限,速度相对非常快.</li>
+<ul>
+<li>直流双模电压放大倍数</li>
+</ul>
+<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212301629967.png"/>
+
+
+<table>
+<thead>
+<tr>
+<th>测量与计算值</th>
+<th>–</th>
+<th>Uc1</th>
+<th>Uc2</th>
+<th>Uo双</th>
+<th>Ad1</th>
+<th>Ad2</th>
+<th>Ad双</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>射极接恒流源</td>
+<td>Ui&#x3D;+-0.1</td>
+<td>2.83</td>
+<td>9.7</td>
+<td>-6.872</td>
+<td>-17.2</td>
+<td>17.2</td>
+<td>34.4</td>
+</tr>
+<tr>
+<td>射极接电阻Re1</td>
+<td>Ui&#x3D;+-0.1</td>
+<td>2.3</td>
+<td>9.812</td>
+<td>-6.835</td>
+<td>-17.1</td>
+<td>17.08</td>
+<td>34.18</td>
+</tr>
+</tbody></table>
+<ul>
+<li>直流单模单端输入电压放大倍数<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212301629967.png"/></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>测量与计算值</th>
+<th>–</th>
+<th>Uc1</th>
+<th>Uc2</th>
+<th>Uo双</th>
+<th>Ad1</th>
+<th>Ad2</th>
+<th>Ad双</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>射极接恒流源</td>
+<td>Ui1&#x3D;+0.2 U2&#x3D;0</td>
+<td>2.83</td>
+<td>9.7</td>
+<td>-6.872</td>
+<td>-17.18</td>
+<td>17.18</td>
+<td>34.36</td>
+</tr>
+</tbody></table>
+<ul>
+<li>直流共模电压放大倍数</li>
+</ul>
+<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212301633624.png"/>
+<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212301631671.png"/>
+<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212301634376.png"/>
+<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212301634685.png"/>
+
+<table>
+<thead>
+<tr>
+<th>测量与计算值</th>
+<th>–</th>
+<th>Uc1</th>
+<th>Uc2</th>
+<th>Uo双</th>
+<th>Ac1</th>
+<th>Ac2</th>
+<th>Ac双</th>
+<th>CMRR</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>射极接恒流源</td>
+<td>Ui&#x3D;+-0.1</td>
+<td>6.262</td>
+<td>6.262</td>
+<td>79.084p</td>
+<td>-0.01</td>
+<td>-0.01</td>
+<td>0.7m</td>
+<td>49090</td>
+</tr>
+<tr>
+<td>射极接电阻Re1</td>
+<td>Ui&#x3D;+-0.1</td>
+<td>6.262</td>
+<td>6.262</td>
+<td>134.419p</td>
+<td>0.49</td>
+<td>0.49</td>
+<td>1.11m</td>
+<td>30780</td>
+</tr>
+</tbody></table>
+<ul>
+<li>交流单端输入,单端输出电压放大倍数<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212301635897.png"/></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>输入信号</th>
+<th>Uo1</th>
+<th>Ad1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ui&#x3D;0.15Vpp,f&#x3D;1kHz</td>
+<td>2.14</td>
+<td>14.3</td>
+</tr>
+</tbody></table>
+<p>① 完成相关表格，并将测量值与仿真值对比，必要时做误差分析；<br>② 比较双端输入和单端输入时的输出电压，并对数据做出合理解释；<br>③ 比较双端输入时射极分别接入恒流源和Re1两种情况下的直流差模电压放大倍数和直流共模电压放大倍数，并对数据给出合理解释。<br>④ 比较双端输出和单端输出时的电压放大倍数，并对数据做出合理解释；</p>
+<ul>
+<li>单端和双端输入&#x2F;输出的定义:  双端输入时，信号同时加到两输入端；单端输入时，信号加到一个输入端与地之间，另一个输入端接地。双端输出时，信号取于两输出端之间；单端输出时，信号取于一个输出端到地之间。</li>
+<li>通过实验比较双端输入和单端输入的电压可知,两者相差不大,大致上相同.通过等效可以得到，双端输入其实可以等效为两倍的单端输入输出电压为Ucl-Uc2,Uc2&lt;0,Uc2&#x3D;Uc1，因此输出电压的结果就是2uc1，而单端输入时就是2Uc1，因此这时两者的输出电压大小相等。</li>
+<li>直流差模电压放大倍数大小相近，直流共模电压放大倍数大小变化较大。解释如下:恒流源的内阻为无穷大, 相当于两管发射极之间加了个大电阻,此时对共模信号的负反馈作用表现为无穷大,因此使电路的Ac趋于0, KCMR趋于无穷.</li>
+<li>通过仿真实验数据对比可知，单端输出的放大倍数要比双端输出的大1倍.解释可有课本公式得到:</li>
+<li><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212311547811.png"></li>
+</ul>
+<h2 id="四-实验思考"><a href="#四-实验思考" class="headerlink" title="四. 实验思考"></a>四. 实验思考</h2><ol>
+<li><p>差动直流放大器的优点是什么？缺点是什么？</p>
+<ul>
+<li>优点：提高共模抑制比，提高信号质量；方便稳定静态工作点。</li>
+<li>缺点：结构复杂、分析繁琐；管子的放大倍数降低；成本可能高一点。</li>
+</ul>
+</li>
+<li><p>共模抑制比CMRR的物理意义是什么？实际差动直流放大有什么作用？</p>
+<ul>
+<li>物理意义为：放大器对差模信号的电压放大倍数Aud与对共模信号的电压放大倍数Auc之比，也就是信号放大能力与噪声放大能力的比值，是一个衡量区别放大能力的指标。</li>
+<li>作用： 稳定静态工作点，抑制共模信号能力；用来放大微弱电信号；有效的放大直流信号；能有效的减小输出电阻。</li>
+</ul>
+</li>
+<li><p>为什么大量的模拟运算放大器集成电路中都采用差动直流放大器结构？</p>
+<ul>
+<li>集成电路采用差动放大电路的主要目的是降低共模信号干扰，减少温度漂移的影响。电路中各个器件之间的距离都是微米级别，因此温度，共模信号等的影响对于临近的器件影响非常大，因而普遍采用差动直流放大器结构。</li>
+</ul>
+</li>
+</ol>
+<h2 id="五-实验总结及讨论"><a href="#五-实验总结及讨论" class="headerlink" title="五. 实验总结及讨论"></a>五. 实验总结及讨论</h2><ol>
+<li>差分放大电路是构成多级直接耦合放大电路的基本单元电路，由典型的工作点稳定电路演变而来。为进一步减小零点漂移问题而使用了对称晶体管电路，以牺牲一个晶体管放大倍数为代价获取了低温飘的效果。</li>
+<li>差动直流放大电路具有良好的低频特性，可以放大变化缓慢的信号，由于不存在电容，可以不失真的放大各类非正弦信号。</li>
+<li>差分放大电路有四种接法：双端输入单端输出、双端输入双端输出、单端输入双端输出、单端输入单端输出。</li>
+<li>单端和双端输入&#x2F;输出的定义:  双端输入时，信号同时加到两输入端；单端输入时，信号加到一个输入端与地之间，另一个输入端接地。双端输出时，信号取于两输出端之间；单端输出时，信号取于一个输出端到地之间。</li>
+<li>为了设置合适的静态工作点，电路采用VCC和VEE两组电源供电，一般VCC&#x3D;VEE。</li>
+<li>基本差动放大电路能够抑制零点漂移，是利用电路的对称性。但实际应用中，两个管子是不可能完全对称的，所以单纯依靠电路对称来抑制电路的零点漂移是有限度的。为了进一步提高差分放大电路对零点漂移的抑制作用，可以在尽可能提高电路对称性的基础上，通过减少两个单管放大电路本身的零点漂移，来抑制整个差动放大电路的零点漂移。</li>
+<li>差动放大电路很难实现完全对称的结构，对共模信号仍有一定的放大作用，共模信号往往是噪声、温漂等无用的干扰信号，而差模信号是有用的信号。因此，希望差模电压放大倍数越大越好，共模电压放大倍数越小越好。</li>
+<li>共模抑制比越大，说明差放分辨差模信号的能力越强，而抑制共模信号的能力越强。</li>
+<li>一开始做本次实验，由于差放电路这部分知识课堂上还没学习，感觉有点困惑，通过学习通网课和课外查找资料才完成了实验，在这个过程中收获还是较大的。</li>
 </ol>
  
       <!-- reward -->
@@ -248,7 +408,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://xiaochougege.github.io/archives/ab13bcd7.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://xiaochougege.github.io/archives/272fc84.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -261,19 +421,19 @@
    
   <nav class="article-nav">
     
-      <a href="/archives/eef3c368.html" class="article-nav-link">
+      <a href="/archives/5f96c0e5.html" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            基于深度学习的模式识别
+            负反馈放大电路
           
         </div>
       </a>
     
     
-      <a href="/archives/8e6ea3ca.html" class="article-nav-link">
+      <a href="/archives/3823b3cb.html" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">模糊推理实验</div>
+        <div class="article-nav-title">两级阻容耦合交流放大电路</div>
       </a>
     
   </nav>
