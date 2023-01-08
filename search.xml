@@ -422,7 +422,7 @@
 <li>按电路图连线；</li>
 </ul>
 <p><strong>测静态工作点，UBQ、UCQ和UEQ，完成下表；</strong><br> 交流输入置零短路，用直流电压表测量UBQ、UCQ、 UEQ得到：<br> <img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212240907875.png"/><br>仿真结果图如下:<br><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212242020457.png"/></p>
-<p> |实测|-|-|计算|-|-|-|<br> |-|-|-|-|-|-|-|-|-|<br> |Ubq&#x2F;V|Ucq&#x2F;V|Ueq&#x2F;V|Ieq&#x2F;mA|Icq&#x2F;mA|Ubeq&#x2F;V|Uceq&#x2F;V|<br> |2.39 | 9.88|1.77 | 1.58 |0.64  |0.62  |8.11 | | </p>
+<p>|实测|-|-|计算|-|-|-|<br>|-|-|-|-|-|-|-|-|-|<br>|Ubq&#x2F;V|Ucq&#x2F;V|Ueq&#x2F;V|Ieq&#x2F;mA|Icq&#x2F;mA|Ubeq&#x2F;V|Uceq&#x2F;V|<br>|2.39 | 9.88|1.77 | 1.58 |0.64  |0.62  |8.11 | | </p>
 <p><strong>动态性能测试</strong></p>
 <ul>
 <li>调整信号发生器，得到50mv(Vpp，以示波器显示值为准)，频率1kHz的正弦信号，接入 A 点<br>① 绘制输入输出信号波形<br>用示波器两个通道分别观察输入和输出信号波形(幅值、相位)，完成绘图。<br>② 测量电压放大倍数Au<br>  根据示波器显示值，记录 Ui和Uo（有效值），并数据记录在下表中；<br>Au&#x3D;Uo&#x2F;Ui<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212242037807.png"/>
@@ -471,6 +471,7 @@
 <ul>
 <li><strong>Ri</strong>:<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212242048351.jpg"/></li>
 </ul>
+<hr>
 <table>
 <thead>
 <tr>
@@ -487,11 +488,13 @@
 <td>7227.273</td>
 </tr>
 </tbody></table>
+<hr>
 <ul>
 <li><strong>Ro</strong>:<img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202212242049243.jpg"/></li>
 </ul>
-<p>|Vo|Vl|Rl|Ro|<br>|–|–|–|–|–|<br>|309|250|10|2350.422|</p>
-<h2 id="六-实验思考"><a href="#六-实验思考" class="headerlink" title="六. 实验思考"></a>六. 实验思考</h2><ol>
+<hr>
+<p>|Vo|Vl|Rl|Ro|<br>|–|–|–|–|–|</p>
+<h2 id="309-250-10-2350-422"><a href="#309-250-10-2350-422" class="headerlink" title="|309|250|10|2350.422|"></a>|309|250|10|2350.422|</h2><h2 id="六-实验思考"><a href="#六-实验思考" class="headerlink" title="六. 实验思考"></a>六. 实验思考</h2><ol>
 <li>为什么晶体管放大电路静态工作点设置不合理时，将会产生饱和失真或截止失真?</li>
 </ol>
 <ul>
