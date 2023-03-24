@@ -157,7 +157,7 @@
 </ul>
 <h2 id="九-tmux"><a href="#九-tmux" class="headerlink" title="九. tmux"></a>九. tmux</h2><ul>
 <li>以前我们应该经常在电影中看到黑客们屏幕前滚动的帅气的终端窗口,tmux(terminal multiplexer)是一个终端复用器,它能实现在终端中同时运行多个会话,大大提高效率.<br><img src="https://jsd.cdn.zzko.cn/gh/xiaochougege/picture.bed/img/202303241943979.png"><br><img src="https://jsd.cdn.zzko.cn/gh/xiaochougege/picture.bed/img/202303241942994.png"></li>
-<li>会话(session):每次打开终端窗口(window)，输入命令。这种<br>用户与计算机临时的交互，称作一次“会话”。每个会话都是一<br>个独立工作区，包含一到多个窗口。</li>
+<li>会话(session):每次打开终端窗口(window)，输入命令。这种用户与计算机临时的交互，称作一次“会话”。每个会话都是一个独立工作区，包含一到多个窗口。</li>
 <li>会话的一个特点是，窗口与其中启动的进程绑定。</li>
 <li>tmux的一些基本操作:</li>
 <li>安装tmux:sudo apt install tmux</li>
