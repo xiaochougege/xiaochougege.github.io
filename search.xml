@@ -229,7 +229,7 @@
       </tags>
   </entry>
   <entry>
-    <title>cs50_prset</title>
+    <title>cs50系列1</title>
     <url>/archives/a9531e6a.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="CS50-week1"><a href="#CS50-week1" class="headerlink" title="CS50-week1"></a><center>CS50-week1</h1><hr>
 <h2 id="1-Hello"><a href="#1-Hello" class="headerlink" title="1. Hello"></a>1. Hello</h2><p>开篇作业，prset1.1非常简单，就是简单地在屏幕打印出每一个人编程时的第一句”Hello,World!”。当然prset1.1与众不同在于cs50基于vscode这个编辑器创建了一个codespace。在这个沙盒之中，我们需要自己安装Mingw编译器，同时该沙盒也ssh到了我们的Github上并且具有评分系统等多种功能，非常方便，一度让我感觉非常惊艳。peset1.1主要还是熟悉了一些shell指令，诸如<strong>wget,unzip,rm,cd,ls,pwd…</strong>,同时也了解到如何通过命令行来编译.c文件。</p>
