@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>人醉梦亦碎</title>
   <icon>http://xiaochougege.github.io/icon.png</icon>
-  <subtitle>xiaochougege&#39;s Blog</subtitle>
+  <subtitle>joker&#39;s Blog</subtitle>
   <link href="http://xiaochougege.github.io/atom.xml" rel="self"/>
   
   <link href="http://xiaochougege.github.io/"/>
@@ -10,7 +10,7 @@
   <id>http://xiaochougege.github.io/</id>
   
   <author>
-    <name>消愁哥哥</name>
+    <name>joker</name>
     
   </author>
   
