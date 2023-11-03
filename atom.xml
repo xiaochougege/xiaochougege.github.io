@@ -6,7 +6,7 @@
   <link href="http://xiaochougege.github.io/atom.xml" rel="self"/>
   
   <link href="http://xiaochougege.github.io/"/>
-  <updated>2023-11-03T04:56:45.807Z</updated>
+  <updated>2023-11-03T12:54:49.665Z</updated>
   <id>http://xiaochougege.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript基础语法笔记</title>
+    <link href="http://xiaochougege.github.io/archives/a6506496.html"/>
+    <id>http://xiaochougege.github.io/archives/a6506496.html</id>
+    <published>2023-11-03T19:36:32.000Z</published>
+    <updated>2023-11-03T12:54:49.665Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JS" scheme="http://xiaochougege.github.io/tags/JS/"/>
+    
+  </entry>
   
   <entry>
     <title>简易Markdown笔记</title>

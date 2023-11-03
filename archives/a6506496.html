@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="淡化成败,无问西东" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>JavaScript基础语法笔记 |  人醉梦亦碎</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <script src="https://cdn.staticfile.org/mermaid/8.14.0/mermaid.min.js"></script>
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="人醉梦亦碎" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-JavaScript基础语法"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  JavaScript基础语法笔记
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/archives/a6506496.html" class="article-date">
+  <time datetime="2023-11-03T19:36:32.000Z" itemprop="datePublished">2023-11-03</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">5.2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">22 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="JavaScript基础语法"><a href="#JavaScript基础语法" class="headerlink" title="JavaScript基础语法"></a><center>JavaScript基础语法</h1><hr>
+<h2 id="一-变量案例"><a href="#一-变量案例" class="headerlink" title="一. 变量案例"></a>一. 变量案例</h2><ul>
+<li>用户输入姓名</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var name = prompt(&quot;请输入你的姓名&quot;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>输出用户名</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(name);//不声明直接赋值,结果可以正常输出,但是会变成全局变量</span><br></pre></td></tr></table></figure>
+<ul>
+<li>交换两个变量的值</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var apple1 = &#x27;红苹果&#x27;;</span><br><span class="line">        var apple2 = &#x27;青苹果&#x27;;</span><br><span class="line">        var temp;</span><br><span class="line">        temp = apple1;</span><br><span class="line">        apple1 = apple2;</span><br><span class="line">        apple2 = temp;</span><br><span class="line">        console.log(apple1);</span><br><span class="line">        console.log(apple2);</span><br></pre></td></tr></table></figure>
+
+<h2 id="二-数据类型"><a href="#二-数据类型" class="headerlink" title="二. 数据类型"></a>二. 数据类型</h2><p>js变量的数据类型是只有程序在运行过程中根据等号右边的值来确定的。同时js具有动态类型，相同的变量可用作不同类型。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var x = 10;</span><br><span class="line">        x = &#x27;xiaochou&#x27;;</span><br><span class="line">        console.log(x);</span><br></pre></td></tr></table></figure>
+<p>js数据类型分为两大类:</p>
+<ol>
+<li><p>简单数据类型(Mumber, String,Boolean,Undefined,Null);</p>
+<ol>
+<li>数值型Number <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 八进制,数值前面加0表示八进制</span><br><span class="line">var x = 010;</span><br><span class="line">console.log(x);</span><br><span class="line">// 2.十六进制,数值前面加0x</span><br><span class="line">var x = 0x1f;</span><br><span class="line">console.log(x);</span><br><span class="line">//最值</span><br><span class="line">console.log(Number.MAX_VALUE);</span><br><span class="line">console.log(Number.MIN_VALUE);</span><br><span class="line">//无穷大</span><br><span class="line">console.log(Number.MAX_VALUE * 2);</span><br><span class="line">//无穷小</span><br><span class="line">console.log(-Number.MAX_VALUE * 2);</span><br><span class="line">//非数字NaN</span><br><span class="line">console.log(&#x27;dd&#x27; - 100);</span><br><span class="line">//isNaN判断是否为数字,会返回一个值,是数字返回false</span><br><span class="line">console.log(isNaN(12));</span><br><span class="line">console.log(isNaN(&#x27;pink&#x27;));</span><br></pre></td></tr></table></figure></li>
+<li>字符串型(加单引号) <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 引号嵌套(外单内双,外双内单)</span><br><span class="line">// 换行使用转义符号(\n)</span><br><span class="line">//字符串长度length</span><br><span class="line">var name = &#x27;hdhduihiwira&#x27;;</span><br><span class="line">console.log(name.length);</span><br><span class="line">//字符串的拼接(+),什么类型皆可,最终结果为字符串型</span><br><span class="line">console.log(&#x27;消愁&#x27; + &#x27;joker&#x27;);</span><br><span class="line">console.log(&#x27;xiaochou&#x27; + true);</span><br><span class="line">var age = 18;</span><br><span class="line">console.log(&#x27;今年&#x27; + age + &#x27;岁&#x27;);</span><br></pre></td></tr></table></figure></li>
+<li>布尔型boolean <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> var flag = true;</span><br><span class="line">console.log(flag);</span><br></pre></td></tr></table></figure></li>
+<li>Undefined未定义数据类型 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// 若和数字相加,结果为NaN</span><br></pre></td></tr></table></figure></li>
+<li>Null 空值 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var space = undefined;</span><br><span class="line">console.log(space);</span><br><span class="line">var spa = null;</span><br><span class="line">console.log(spa);</span><br><span class="line">//typeof获取变量数据类型</span><br><span class="line">var x = 10;</span><br><span class="line">console.log(typeof x);</span><br><span class="line">x = &#x27;xiaochou&#x27;;</span><br><span class="line">console.log(typeof x);</span><br><span class="line">//prompt获取的输入值为字符型</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>复杂数据类型(object对象，Array数组)</p>
+</li>
+<li><p>数据类型转换</p>
+<ol>
+<li>转字符串型(toString();String1()强制转换;加号拼接字符串) <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var num = &#x27;10&#x27;;</span><br><span class="line">    var str = num.toString();</span><br><span class="line">    console.log(typeof str);</span><br><span class="line">    console.log(String(num));</span><br><span class="line">    console.log(&#x27;&#x27; + num); //隐式转换</span><br></pre></td></tr></table></figure></li>
+<li>转数字型(parseInt(String);parseFloat(String);Number(变量)强制转换;隐式转换(-*&#x2F;)) <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&#x27;12&#x27; - 0); //利用算数运算</span><br></pre></td></tr></table></figure></li>
+<li>转化为布尔型(Booean()函数);</li>
+</ol>
+</li>
+<li><p>简单案例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var day = prompt(&#x27;你是什么时候出生的?&#x27;); //返回字符串型</span><br><span class="line">    var days = parseInt(day);</span><br><span class="line">    days = 2023 - days;</span><br><span class="line">    alert(&#x27;你今年&#x27; + days + &#x27;岁&#x27;);</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="三-运算符"><a href="#三-运算符" class="headerlink" title="三. 运算符"></a>三. 运算符</h2><ul>
+<li>(操作符)—–&gt;(+ - * &#x2F;)</li>
+<li>表达式与返回值</li>
+<li>自加++,自减–</li>
+<li>前置:先运算后自加(先人后己)</li>
+<li>后置:先自加后运算(先己后人)</li>
+<li>比较运算符(关系运算符),返回布尔值</li>
+<li>逻辑运算符(&amp;&amp; 与；||或；!非)</li>
+<li>赋值运算符(&#x3D; +&#x3D; -&#x3D;)</li>
+<li>优先级:(),一元运算符,算数运算符,关系运算符,相等运算符,逻辑运算符,赋值运算符,逗号运算符<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log(133 &amp;&amp; 234); //逻辑中断:左真则返回右;左假返回左;</span><br><span class="line">        console.log(123 || 345); //逻辑中断:左真返回左,左假返回右,与上面相反</span><br><span class="line">        var num = 0;</span><br><span class="line">        console.log(123 || num++); //123为真,输出123,num++不执行</span><br><span class="line">        console.log(num); //返回0</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="四-流程控制"><a href="#四-流程控制" class="headerlink" title="四. 流程控制"></a>四. 流程控制</h2><ul>
+<li>if switch 三元表达式</li>
+<li>顺序结构,分支结构,循环结构</li>
+<li>三元表达式 条件 ? 结果1 : 结果2  </li>
+<li>if-else与switch区别:switch用于比较确定值,if-else用于判断范围。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var time = prompt(&#x27;请输入一个随机数字:&#x27;)</span><br><span class="line">        var result = time &lt; 10 ? &#x27;0&#x27; + time : time;</span><br><span class="line">        alert(result);</span><br><span class="line">        //switch-case-break-default  执行思路:匹配</span><br><span class="line">        var fruit = prompt(&#x27;请你输入水果名称:&#x27;);</span><br><span class="line">        switch (fruit) &#123;</span><br><span class="line">            case &#x27;苹果&#x27;:</span><br><span class="line">                alert(&#x27;苹果价格35元&#x27;);</span><br><span class="line">                break;</span><br><span class="line">            case &#x27;香蕉&#x27;:</span><br><span class="line">                alert(&#x27;香蕉价格20元&#x27;);</span><br><span class="line">                break;</span><br><span class="line">            default:</span><br><span class="line">                alert(&#x27;没有该种水果&#x27;);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>案例</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">for (i = 1; i &lt;= 100; i++) &#123;</span><br><span class="line">            console.log(&#x27;啊哈哈&#x27;);</span><br><span class="line">        &#125;</span><br><span class="line">        //1.求1-100之间所有数都平均值</span><br><span class="line">        var sum = 0;</span><br><span class="line">        for (i = 0; i &lt;= 100; i++) &#123;</span><br><span class="line">            sum += i;</span><br><span class="line">        &#125;</span><br><span class="line">        var even = sum / 100;</span><br><span class="line">        console.log(even);</span><br><span class="line">        // 2.求1-100站之间所有偶数的平均值</span><br><span class="line">        var sum = 0;</span><br><span class="line">        var cout = 0;</span><br><span class="line">        for (j = 0; j &lt;= 100; j++) &#123;</span><br><span class="line">            if (j % 2 == 0) &#123;</span><br><span class="line">                sum += j;</span><br><span class="line">                cout++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        var ou = sum / cout;</span><br><span class="line">        console.log(ou);</span><br></pre></td></tr></table></figure>
+<h2 id="五-数组"><a href="#五-数组" class="headerlink" title="五. 数组"></a>五. 数组</h2><p>所谓数组,即一组数据的集合,存储在单个变量下。<br>在js中，创建数组有以下几种方式：</p>
+<ol>
+<li>new关键字创建;</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var arr = new Array(); // 创建一个空数组</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>数组字面量创建</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var array = [];</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>数组长度 数组名.length</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [44, 23.4, 2.4, 4, 25, 2, 34];</span><br><span class="line">        for (var i = 1; i &lt; arr.length; i++) &#123;</span><br><span class="line">            console.log(arr[i]);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>求最值</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var arr = [32213, 423, 4324, 35, 5, 542];</span><br><span class="line">var max = arr[0];</span><br><span class="line">for (var i = 1; i &lt; arr.length; i++) &#123;</span><br><span class="line">    if (max &lt; arr[i]) &#123;</span><br><span class="line">        max = arr[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(&#x27;该数组的最大值为&#x27; + max);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>删除数组指定元素,例如0;</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var arr = [37312, 4, 342, 4, 0, 0, 0, 32, 44, 3];</span><br><span class="line">var newArr = [];</span><br><span class="line">for (var i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">    if (arr[i] != 0) &#123;</span><br><span class="line">        newArr[newArr.length] = arr[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(&#x27;新数组为&#x27; + newArr);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>冒泡排序</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [5, 4, 3, 2, 1];</span><br><span class="line">for (var i = 1; i &lt; arr1.length; i++) &#123;</span><br><span class="line">    for (var j = 0; j &lt;= arr1.length - i;++) &#123;</span><br><span class="line">        if (arr1[j] &gt; arr1[j + 1]) &#123;</span><br><span class="line">            var temp = arr1[j];</span><br><span class="line">            arr1[j] = arr1[j + 1];</span><br><span class="line">            arr1[j + 1] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(&#x27;冒泡排序的结果是:&#x27; + arr1);</span><br></pre></td></tr></table></figure>
+
+<h2 id="六-函数"><a href="#六-函数" class="headerlink" title="六. 函数"></a>六. 函数</h2><ul>
+<li>函数求两个数最大值</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function getMax(num1, num2) &#123;</span><br><span class="line">    /* if (num1 &gt; num2) &#123;</span><br><span class="line">        return num1;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return num2;</span><br><span class="line">    &#125; */</span><br><span class="line">    return num1 &gt; num2 ? num1 : num2; //元表达式;</span><br><span class="line">&#125;</span><br><span class="line">console.log(getMax(3646, 41244));</span><br></pre></td></tr></table></figure>
+<ul>
+<li>函数求数组最大值</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function getMaxarr(arr) &#123;</span><br><span class="line">    var max = arr[0];</span><br><span class="line">    for (var i = 1; i &lt; arr.length; i++) &#123;</span><br><span class="line">        if (arr[i] &gt; max) &#123;</span><br><span class="line">            max = arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return max;</span><br><span class="line">&#125;</span><br><span class="line">var result = getMaxarr([31, 31313, 12, 3243, 0]);</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>return 终止函数,碰到return后面代码不会执行</li>
+<li>return 只能返回一个值(最后一个值),不过可以通过数组返回多个值</li>
+<li>如果函数没返回值,则返回undefined</li>
+<li>break: 结束当前循环体;</li>
+<li>continue: 跳出本次循环,继续执行下次循环;</li>
+<li>return: 不仅可以跳出循环,还能返回return语的值,同时可以结束函数体内的代码。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function getSult(num1, num2) &#123;</span><br><span class="line">    return [num1, num2, num1 + num2, num1*2];</span><br><span class="line">&#125;</span><br><span class="line">console.log(getSult(1, 2));</span><br></pre></td></tr></table></figure>
+
+<h2 id="七-作用域与预解析"><a href="#七-作用域与预解析" class="headerlink" title="七. 作用域与预解析"></a>七. 作用域与预解析</h2><ul>
+<li>arguments的使用(获取传递的参数),存储传递过来的所有实参;</li>
+<li>展示形式为一个伪数组,因此可以进行遍历;<ol>
+<li>具有数组length属性;</li>
+<li>按照索引方式存储;</li>
+<li>没有真正数组的一些方法pop(),push()</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function fu() &#123;</span><br><span class="line">    console.log(arguments);</span><br><span class="line">    console.log(arguments.length);</span><br><span class="line">    console.log(arguments[0]);</span><br><span class="line">&#125;</span><br><span class="line">fu(2, 1313, 0);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>利用函数求任意个数的最大值</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function getMax() &#123;</span><br><span class="line">    var max = arguments[0];</span><br><span class="line">    for (var i = 1; i &lt; arguments.length;++) &#123;</span><br><span class="line">        if (arguments[i] &gt; max) &#123;</span><br><span class="line">            max = arguments[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return max;</span><br><span class="line">&#125;</span><br><span class="line">console.log(getMax(12, 3, 3, 24, 324, 987));</span><br></pre></td></tr></table></figure>
+<ul>
+<li>函数声明方式</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 1. 利用函数关键字自定义函数(命名函数)</span><br><span class="line">function fn() &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">// 2. 函数表达式(匿名函数)</span><br><span class="line">// var 变量名 = function()&#123;&#125;</span><br><span class="line">var fun = function() &#123;</span><br><span class="line">    console.log(&#x27;我是函数表达式&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">fun(); // 变量名,非函数名,不过可以传递参数</span><br></pre></td></tr></table></figure>
+<ul>
+<li>作用域: 代码名字(变量)在某段范围内起作用与效果,未来提高程序可靠性,减少命名冲突</li>
+<li>es6: 全局作用域,局部作用域</li>
+<li>全局作用域: 整个script标签或单独js文件</li>
+<li>局部作用域: 在函数内部,只在函数内部起作用(数作用域)</li>
+<li>全局变量与局部变量(根据作用域的不同)</li>
+<li>注意: 函数内部没有声明字节赋值使用的变量也于全局变量;函数的形参可以看作局部变量</li>
+<li>全局变量只有浏览器关闭的时候才会销毁,比较内存;局部变量当程序执行完毕时销毁,节约内存。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">function fu() &#123;</span><br><span class="line">    num = 20;</span><br><span class="line">    console.log(num);</span><br><span class="line">&#125;</span><br><span class="line">console.log(num);</span><br><span class="line">``````   </span><br><span class="line">* es5 没有块级作用域,es6才有</span><br><span class="line">* 块级作用域&#123;&#125;</span><br><span class="line">* 作用域链: 根据内部函数可以访问外部函数的机制,用链式查找决定那些数据能被内部函数访问(就近原则)  </span><br><span class="line">```</span><br><span class="line">function f1() &#123;</span><br><span class="line">    var num = 123;</span><br><span class="line">    function f2() &#123;</span><br><span class="line">        console.log(num);</span><br><span class="line">    &#125;</span><br><span class="line">    f2();</span><br><span class="line">&#125;</span><br><span class="line">var num = 456;</span><br><span class="line">f1(); //123 </span><br><span class="line">```</span><br><span class="line">* js运行代码时分为两步: 预解析,代码执行</span><br><span class="line">* 预解析: js引擎会把js里面所有var ,function,提升到当前作用域的最前面 </span><br><span class="line">* 代码执行: 按照代码书写顺序从上往下执行</span><br><span class="line">* 预解析分为: 变量预解析(变量提升);函数预解析(函数提升)</span><br><span class="line">* 变量提升: 将变量声明提升至当前作用域最前面,不提升赋值操作</span><br><span class="line">* 函数提升: 函数声明提升,不调用函数; </span><br><span class="line"></span><br><span class="line">```</span><br><span class="line">f1();</span><br><span class="line">console.log(c);</span><br><span class="line">console.log(b);</span><br><span class="line">console.log(a);</span><br><span class="line"></span><br><span class="line">function f1() &#123;</span><br><span class="line">    var a = b = c = 9;</span><br><span class="line">    console.log(a);</span><br><span class="line">    console.log(b);</span><br><span class="line">    console.log(c);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">// 代码相当于</span><br><span class="line">function f1() &#123;</span><br><span class="line">    var a;</span><br><span class="line">    a = b = c = 9; // 此处bc只赋值没声明,为全局变量</span><br><span class="line">    console.log(a);</span><br><span class="line">    console.log(b);</span><br><span class="line">    console.log(c);</span><br><span class="line">&#125;</span><br><span class="line">f1();</span><br><span class="line">console.log(c);</span><br><span class="line">console.log(b);</span><br><span class="line">console.log(a); //报错</span><br><span class="line">```</span><br><span class="line"></span><br><span class="line">## 八. 对象</span><br><span class="line">* 对象: 无序的相关属性和方法的集合,由属性和方法组成</span><br><span class="line">* 创建方法: 字面量;new Object;构造函数</span><br><span class="line">* 字面量:&#123;&#125;里面包含了这个具体事务的属性与方法(名词与动词)</span><br></pre></td></tr></table></figure>
+<p>var obj &#x3D; {<br>    uname: ‘xiaochou’,<br>    age: 18,<br>    sex: ‘男’,<br>    sayHi: function() {<br>        console.log(‘hi~’);<br>    }<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* 里面的属性与方法采用键值对的形式 键 属性名 : 值 属性值</span><br><span class="line">* 中间由,隔开</span><br><span class="line">* 方法冒号后跟一个匿名函数</span><br><span class="line">* 调用对象属性,我们采用 对象名.属性名</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>console.log(obj.uname);</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* 对象名[&#x27;属性名&#x27;]</span><br><span class="line">```</span><br><span class="line">console.log(obj[&#x27;uname&#x27;]);</span><br><span class="line">```</span><br><span class="line">*  调用对象的方法 对象名.方法名()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>obj.sayHi();</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*  变量与属性:都是用来存储数据,不同的是变量单独声明并赋值,单独存在;属性在对象里面,无需声明且使用时不可脱离对象</span><br><span class="line">*  函数和方法: 都是实现某种功能,不同的是函数单独声明,单独存在;方法在对象里面,调用时不可脱离对象</span><br><span class="line">* new Object</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>var obj &#x3D; new Object();<br>obj.uname &#x3D; ‘xiaochou’;<br>obj.age &#x3D; 18;<br>obj.sex &#x3D; ‘男’;<br>obj.sayHi &#x3D; function() {<br>        console.log(‘hi~’);<br>    }</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* 利用等号赋值添加属性与方法;</span><br><span class="line">* 中间用;隔开</span><br><span class="line">* 调用跟前面一致</span><br><span class="line">* 构造函数: 因为前面两种方式一次只能创建一个对象,里面很多属性方法相似,封装到函数里面,即将对象里面相同的属性与方法抽象出来封装到函数里面</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>function Star(uname, age, sex) { &#x2F;&#x2F; 构造函数名首字母大写<br>    this.name &#x3D; uname; &#x2F;&#x2F; 属性与方法前面必须加this<br>    this.age &#x3D; age;<br>    this.sex &#x3D; sex; &#x2F;&#x2F; 无需return就可以返回结果<br>}<br>var xc &#x3D; new Star(‘xiaochou’, 18, ‘男’); &#x2F;&#x2F; 调用构造函数必须写new<br>console.log(typeof xc); &#x2F;&#x2F; 调用函数返回一个对象<br>console.log(xc.name);</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*  对象与构造函数的区别: 构造函数泛指某一大类;对象特指一个具体的事物</span><br><span class="line">*  利用构造函数创建对象的过程也称为对象的实例化,通过关键字new</span><br><span class="line">*  new 关键字</span><br><span class="line">* 首先在内存里面创建一个空的对象,this会指向这个对象,执行构造函数里面的代码,给空对象添加属性与方法,最后返回这个对象,无需return</span><br><span class="line">*  遍历对象</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>var obj &#x3D; {<br>    name: ‘xioacou’,<br>    age: 18,<br>    sex: ‘男’<br>}<br>for (k in obj) {<br>    console.log(k); &#x2F;&#x2F; k为变量,输出得到属性名<br>    console.log(obj.k); &#x2F;&#x2F; obj[k]得到的是属性值<br>}<br>&#x2F;&#x2F;使用for.. in 一般使用k 或者 key</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 九. 内置对象</span><br><span class="line">* 自定义对象,内置对象,浏览器对象</span><br><span class="line">* Math , Date , Array , String常见这四个</span><br><span class="line">* Math对象不是构造函数,无需new调用,直接使用即可</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>console.log(Math.PI);<br>console.log(Math.max(313, 31, 41, 24));</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 封装对象</span><br></pre></td></tr></table></figure>
+<p> var myMath &#x3D; {<br>     PI: 3.1415926,<br>     max: function() {<br>         var max &#x3D; arguments[0];<br>         for (var i &#x3D; 1; i &lt; arguments.length; i++) {<br>             if (arguments[i] &gt; max) {<br>                 max &#x3D; arguments[i];<br>             }<br>         }<br>         return max;<br>     },<br>     min: function() {<br>         var min &#x3D; arguments[0];<br>         for (var i &#x3D; 1; i &lt; arguments.length; i++) {<br>             if (arguments[i] &lt; min) {<br>                 min &#x3D; arguments[i];<br>             }<br>         }<br>         return min;<br>     }<br> }<br> console.log(myMath.PI);<br> console.log(myMath.max(313, 31, 41, 24));<br> console.log(myMath.min(313, 31, 41, 24));</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* 绝对值: Math.abs() 会把字符串型进行隐式转换成数字型</span><br><span class="line">* 向下取整: Math.floor()</span><br><span class="line">* 向上取整: Math.ceil()</span><br><span class="line">* 四舍五入: Math.round()</span><br><span class="line">* 随机数:  Math.random()返回一个随机浮点数,0-1之间[0~1),里面不跟参数</span><br><span class="line">* 得到随机整数并且包含这两个数</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> function getRandom(min, max) {<br>     return Math.floor(Math.random() * (max - min + 1)) + min;<br> }<br> console.log(getRandom(1, 100));</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* Date日期对象: 倒计时案例</span><br><span class="line">* 核心算法: 输入时间减去当前时间,但是由于时分不能为负数,因此得利用时间戳通过毫秒来进行计算</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> function countDown(time) {<br>     var nowTime &#x3D; +new Date(); &#x2F;&#x2F;+new Date()表示时间戳,即当前时间距离1970.1.1的毫秒数<br>     var inputTime &#x3D; +new Date(time); &#x2F;&#x2F;表示输入时间的时间戳<br>     var times &#x3D; (inputTime - nowTime) &#x2F; 1000; &#x2F;&#x2F;times为计时间隔的时间,单位为秒,ms&#x2F;1000&#x3D;s;<br>     var d &#x3D; parseInt(times &#x2F; 60 &#x2F; 60 &#x2F; 24);<br>     d &lt; 10 ? ‘0’ + d : d;<br>     var h &#x3D; parseInt(times &#x2F; 60 &#x2F; 60 % 24);<br>     h &lt; 10 ? ‘0’ + h : h;<br>     var m &#x3D; parseInt(times &#x2F; 60 % 60);<br>     m &lt; 10 ? ‘0’ + m : m;<br>     var s &#x3D; parseInt(times % 60);<br>     s &lt; 10 ? ‘0’ + s : s;<br>     return d + ‘天’ + h + ‘时’ + m + ‘分’ + s + ‘秒’; &#x2F;&#x2F;记得返回值<br> }<br> console.log(countDown(‘2023-11-2’));<br> var date &#x3D; new Date(); &#x2F;&#x2F;Date对象使用需要进行实例化(泛指)<br> console.log(date);</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 数组对象Array()</span><br><span class="line">* 创建: </span><br><span class="line">  * 字面量</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code>var arr = [1, 2, 3];
+console.log(arr[0]);
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 利用new Array()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+ var arr1 = new Array(2); //构造函数,需要进行实例化,2表示数组长度为2;
+ console.log(arr1);
+ var arr2 = new Array(2, 3); //等价于利用字面量创建以各[2,3]
+ console.log(arr2);
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 翻转数组之检测是否为数组</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+</code></pre>
+<p> var arrAy &#x3D; [];<br> console.log(arrAy.length); &#x2F;&#x2F; 返回0,但是数组从0开始计数<br> function reserve(arr3) {<br>     if (arr3 instanceof Array) {<br>         var newArr &#x3D; [];<br>         for (var i &#x3D; arr3.length - 1; i &gt;&#x3D; 0; i–) {<br>             newArr[newArr.length] &#x3D; arr3[i];<br>         }<br>         return newArr;<br>     } else {<br>         return ‘参数需要为数组格式!’;<br>     }<br> }<br> console.log(reserve([1, 2, 3]));<br> console.log(reserve(1, 2, 3));<br> &#x2F;&#x2F; 1. instanceof 运算符,可以检测是否为数组<br> var arr &#x3D; [];<br> var obj &#x3D; {};<br> console.log(arr instanceof Array);<br> console.log(obj instanceof Array);<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* Array.isArray(参数)</span><br></pre></td></tr></table></figure><br> console.log(Array.isArray(arr));<br> console.log(Array.isArray(obj)); &#x2F;&#x2F;优先级更高,兼容性较差</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*  添加或者删除数组元素</span><br><span class="line">*  1. push() 数组末尾添加一个或者多个,参数直接为数组元素,返回值为新数组的长度</span><br><span class="line">*  2. unshift 数组开头添加一个或者多个,参数直接为数组元素,返回值为新数组的长度</span><br><span class="line">*  3. pop() 删除数组最后一个元素,里面不跟参数,返回值为删除元素</span><br><span class="line">*  4. shift() 删除数组第一个元素,里面不跟参数,返回值为删除元素</span><br><span class="line">*  筛选数组(筛选处小于2000的元素)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> var arr4 &#x3D; [3123, 3121, 44, 343, 35, 3, 9709];<br> var newArr &#x3D; [];<br> for (var i &#x3D; 0; i &lt; arr4.length; i++) {<br>     if (arr4[i] &lt; 2000) {<br>         newArr.push(arr4[i]);<br>     }<br> }<br> console.log(newArr);<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 翻转数组reverse()</span><br><span class="line"></span><br></pre></td></tr></table></figure><br> var arr5 &#x3D; [‘red’, ‘blue’, ‘pink’];<br> console.log(arr5.reverse());<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 冒泡排序sort()</span><br><span class="line"></span><br></pre></td></tr></table></figure><br> var arr6 &#x3D; [12, 31421, 42, 34, 34, 323]; &#x2F;&#x2F; 通过getString转字符串编码,不准确<br> arr6.sort();<br> console.log(arr6);<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 解决方案</span><br><span class="line"></span><br></pre></td></tr></table></figure><br> var arr7 &#x3D; [13, 4, 77, 1, 7];<br> arr7.sort(function(a, b) {<br>     return a - b; &#x2F;&#x2F; 升序,若降序即b - a;<br> });<br> console.log(arr7);<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 获取数组的索引号 indexOf()  只返回第一个,返回-1表示没有此元素</span><br><span class="line">* lastIndexOf()从后往前查找</span><br><span class="line"></span><br></pre></td></tr></table></figure><br> var arr8 &#x3D; [13, 4, 77, 1, 7];<br> console.log(arr8.indexOf(13));<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 数组去重案例</span><br><span class="line">* 核心算法: 遍历旧数组,用旧数组元素查询新数组,若新数组没有则添加</span><br><span class="line"></span><br></pre></td></tr></table></figure><br> var arr9 &#x3D; [‘c’, ‘a’, ‘z’, ‘a’, ‘x’, ‘a’, ‘x’, ‘c’, ‘b’];<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 封装一个函数来实现该功能</span><br><span class="line"></span><br></pre></td></tr></table></figure><br> function unique(arr) {<br>     var newArr &#x3D; [];<br>     for (var i &#x3D; 0; i &lt; arr.length; i++) {<br>         if (newArr.indexOf(arr[i]) &#x3D;&#x3D; -1) {<br>             newArr[newArr.length] &#x3D; arr[i];<br>             &#x2F;&#x2F; newArr.push(arr[i]);<br>         }<br>     }<br>     return newArr;<br> }<br> var arr9 &#x3D; unique([‘c’, ‘a’, ‘z’, ‘a’, ‘x’, ‘a’, ‘x’, ‘c’, ‘b’]);<br> console.log(arr9);<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 数组转换为字符串</span><br><span class="line">   1. toString()</span><br><span class="line">   2. join(分割符)</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>var array &#x3D; [‘red’, ‘blue’, ‘pink’];<br>console.log(array.join(‘-‘));<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 十. 简单类型与复杂类型</span><br><span class="line">* 对象才有属性与方法(复杂数据类型)</span><br><span class="line">* 但是简单数据类型有length属性</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>var str &#x3D; ‘aiaiaiiai’;<br>console.log(str.length);</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 基本包装类型(简单数据类型包装成复杂数据类型)，相当于以下:</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>var temp &#x3D; new String(‘aiaiaiaiai’); &#x2F;&#x2F; 通过临时变量将简单数据类型转化为复杂数据类型<br>str &#x3D; temp; &#x2F;&#x2F; 将临时变量赋值给str<br>temp &#x3D; null; &#x2F;&#x2F; 销毁临时变量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* 三种特殊引用类型: String,Number,Boolean</span><br><span class="line">* 字符串的不可变: 里面的值是不可变的,看上去改变了内容,实际上是地址变了,在内存中开辟了一个新的空间,原来的值还是的,因此不要大量拼接字符串,比较占用内存资源</span><br><span class="line">* 字符串所有的方法都不会修改字符串本身(不可变),同时操作完成后会返回一个新的字符串</span><br><span class="line">* 根据字符返回位置   .indexOf(&#x27;要查找的字符&#x27;,[起始位置])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>var str &#x3D; ‘改革春风吹满地,春天来了’;<br>console.log(str.indexOf(‘春’));<br>console.log(str.indexOf(‘春’, 3)); &#x2F;&#x2F; 从索引号为3的位置往后查找</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 统计字符串O出现位置与次数</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>var str &#x3D; ‘joergoegegoegeo’;<br>var index &#x3D; str.indexOf(‘o’); &#x2F;&#x2F; 先查找第一个o的位置<br>var num &#x3D; 0;<br>while (index !&#x3D; -1) { &#x2F;&#x2F; 如果indexOf返回不是-1,即能够找到o,就继续向后查找<br>    console.log(index);<br>    num++<br>    index &#x3D; str.indexOf(‘o’, index + 1); &#x2F;&#x2F; 找到第一个o后从当前位置加1的索引号继续查找<br>}<br>console.log(‘o出现的次数是:’ + num)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* 根据位置返回字符</span><br><span class="line">     1. charAt(index)</span><br><span class="line">     2. charCodeAt(index) 返回对应索引号字符的ASCII码,可用来判断用户输入了哪个键</span><br><span class="line">     3. str[index]  h5新增,具有兼容性问题</span><br><span class="line">* 判断是否有该属性 对象[&#x27;属性&#x27;]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>var o &#x3D; {<br>    age: 18<br>}<br>if (o[‘age’]) {<br>    console.log(‘存在该属性’);<br>} else {<br>    console.log(‘没有该属性’);<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 判断一个字符串中出先次数最多的字符,统计其次数</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>var str1 &#x3D; ‘coirohroigorgtiro’;<br>var o &#x3D; {}; &#x2F;&#x2F; 创建一个空对象<br>for (var i &#x3D; 0; i &lt; str1.length; i++) {<br>    var chars &#x3D; str1.charAt(i); &#x2F;&#x2F; chars为遍历的每一个字符串<br>    if (o[chars]) { &#x2F;&#x2F; 开始创建的空对象没有chars字符串<br>        o[chars]++; &#x2F;&#x2F; 有该属性,+1<br>    } else {<br>        o[chars] &#x3D; 1; &#x2F;&#x2F;给该属性赋值为1<br>    }<br>}<br>console.log(o);</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 遍历对象</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>var max &#x3D; 0;<br>var ch &#x3D; ‘’;<br>for (var k in o) { &#x2F;&#x2F; 遍历对象<br>    &#x2F;&#x2F; k得到属性名<br>    &#x2F;&#x2F; o[k]得到属性值<br>    if (o[k] &gt; max) {<br>        max &#x3D; o[k];<br>        ch &#x3D; k;<br>    }<br>}<br>console.log(max);<br>console.log(‘最多的字符是’ + ch);</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 拼接字符串</span><br><span class="line">    1. concat(&#x27;字符串1&#x27;,&#x27;字符串2&#x27;,&#x27;...&#x27;) 等效+号</span><br><span class="line">    2. substr(&#x27;截止起始位置&#x27;,&#x27;截取几个字符&#x27;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>var str2 &#x3D; ‘改革春风吹满地’;<br>console.log(str2.substr(2, 2));</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 替换字符串 replace(&#x27;被替换字符&#x27;,&#x27;替换为的字符&#x27;) 只会替换第一个字符</span><br><span class="line">* 过滤敏感词</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>var str3 &#x3D; ‘hwifioewfowjfwpfu’;<br>while (str3.indexOf(‘o’) !&#x3D;&#x3D; -1) {<br>    str3 &#x3D; str3.replace(‘o’, ‘*’);<br>}<br>console.log(str3)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 字符转化为数组 split(&#x27;分隔符&#x27;)</span><br><span class="line">* 数组转换为字符 join(&#x27;分隔符&#x27;)</span><br><span class="line">* 简单数据类型: 值类型,即存储时变量储存但是值本身(string,number,boolean,undifined,null)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>var timer &#x3D; null;<br>console.log(typeof timer); &#x2F;&#x2F; null比较特殊,返回object,即一个空的对象</p>
+<p>&#96;&#96;&#96;&#96;&#96;&#96;</p>
+<ul>
+<li>这是一个设计时留下的bug,如果有个变量打算以后储存为对象,暂时没想好,就给null</li>
+<li>栈: 操作系统自动分配释放存放函数的参数值,一般放置简单数据类型</li>
+<li>堆: 存储复杂对象,一般由程序员分配释放,若不则由垃圾回收机制回收,一般存放复杂数据类型</li>
+<li>内存分配: 简单数据类型存放到栈里面,开辟一个空间存放的为值,变量名指向该值;</li>
+<li>复杂数据类型首先在栈里存放地址(十六进制表示),变量名指向该地址,地址指向存放在堆中的数值</li>
+<li>简单数据类型传参: 传参时将变量在栈空间里面的值复制一份给形参,对形参的任何修改都不会影响外部变量</li>
+<li>复杂数据类型传参:  传参时将变量在栈空间里保存的地址复制给形参,形参与实参为同一地址,所以操作的是同一对象.</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://xiaochougege.github.io/archives/a6506496.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/archives/f823f2bf.html" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">简易Markdown笔记</div>
+      </a>
+    
+  </nav>
+
+   
+ 
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2022-2023
+        <i class="ri-heart-fill heart_icon"></i> joker
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/me.ico" alt="人醉梦亦碎"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+ 
+    
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.15.1/katex.min.css">
+        <script src="https://cdn.staticfile.org/KaTeX/0.15.1/katex.min.js"></script>
+        <script src="https://cdn.staticfile.org/KaTeX/0.15.1/contrib/auto-render.min.js"></script>
+        
+    
+ 
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+
+  </div>
+</body>
+
+</html>
