@@ -265,20 +265,6 @@
       </tags>
   </entry>
   <entry>
-    <title>指针</title>
-    <url>/archives/73608288.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="C语言之指针"><a href="#C语言之指针" class="headerlink" title="C语言之指针"></a><center>C语言之指针</h1><hr>
-<blockquote>
-<p>最近在B站上刷到了一个讲解c语言指针的<a href="https://www.bilibili.com/video/BV1bo4y1Z7xf/?spm_id_from=333.1007.top_right_bar_window_history.content.click&vd_source=00c2be9b0275258320b054de12117c97">视频</a>，该视频对指针的讲解深入浅出，看完之后感觉对指针多了几分体会。</p>
-</blockquote>
-<h2 id="一-指针的基本介绍"><a href="#一-指针的基本介绍" class="headerlink" title="一. 指针的基本介绍"></a>一. 指针的基本介绍</h2><p>有一种说法，指针是c语言的灵魂所在。因此理解指针有利于我们更好地掌握C语言。而理解指针，首先应该理解不同数据类型和不同变量如何在计算机中储存。<br><img src="https://gcore.jsdelivr.net/gh/xiaochougege/picture.bed/img/202310101727476.png"><br>计算机的内存结构可以用上图来表示，左侧的数字代表地址，每一个地址都可以存储1byte的数据。(1byte&#x3D;8bit)</p>
-<p>当在程序中声明一个变量时，计算机会为这个变量分配一定的内存空间，具体需要多少内存空间，取决于变量的数据类型以及编译器。</p>
-]]></content>
-      <tags>
-        <tag>c语言</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>简易Markdown笔记</title>
     <url>/archives/f823f2bf.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="简易Markdown笔记"><a href="#简易Markdown笔记" class="headerlink" title="简易Markdown笔记"></a><center>简易Markdown笔记</h1><hr>
