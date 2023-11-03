@@ -525,23 +525,55 @@
 <li>注意: 函数内部没有声明字节赋值使用的变量也于全局变量;函数的形参可以看作局部变量</li>
 <li>全局变量只有浏览器关闭的时候才会销毁,比较内存;局部变量当程序执行完毕时销毁,节约内存。</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function fu() &#123;</span><br><span class="line">    num = 20;</span><br><span class="line">    console.log(num);</span><br><span class="line">&#125;</span><br><span class="line">console.log(num);</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">* es5 没有块级作用域,es6才有</span><br><span class="line">* 块级作用域&#123;&#125;</span><br><span class="line">* 作用域链: 根据内部函数可以访问外部函数的机制,用链式查找决定那些数据能被内部函数访问(就近原则)  </span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>function f1() {<br>    var num &#x3D; 123;<br>    function f2() {<br>        console.log(num);<br>    }<br>    f2();<br>}<br>var num &#x3D; 456;<br>f1(); &#x2F;&#x2F;123 </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">* js运行代码时分为两步: 预解析,代码执行</span><br><span class="line">* 预解析: js引擎会把js里面所有var ,function,提升到当前作用域的最前面 </span><br><span class="line">* 代码执行: 按照代码书写顺序从上往下执行</span><br><span class="line">* 预解析分为: 变量预解析(变量提升);函数预解析(函数提升)</span><br><span class="line">* 变量提升: 将变量声明提升至当前作用域最前面,不提升赋值操作</span><br><span class="line">* 函数提升: 函数声明提升,不调用函数; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>f1();<br>console.log(c);<br>console.log(b);<br>console.log(a);</p>
-<p>function f1() {<br>    var a &#x3D; b &#x3D; c &#x3D; 9;<br>    console.log(a);<br>    console.log(b);<br>    console.log(c);</p>
-<p>}<br>&#x2F;&#x2F; 代码相当于<br>function f1() {<br>    var a;<br>    a &#x3D; b &#x3D; c &#x3D; 9; &#x2F;&#x2F; 此处bc只赋值没声明,为全局变量<br>    console.log(a);<br>    console.log(b);<br>    console.log(c);<br>}<br>f1();<br>console.log(c);<br>console.log(b);<br>console.log(a); &#x2F;&#x2F;报错</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## 八. 对象</span><br><span class="line">* 对象: 无序的相关属性和方法的集合,由属性和方法组成</span><br><span class="line">* 创建方法: 字面量;new Object;构造函数</span><br><span class="line">* 字面量:&#123;&#125;里面包含了这个具体事务的属性与方法(名词与动词)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>var obj &#x3D; {<br>    uname: ‘xiaochou’,<br>    age: 18,<br>    sex: ‘男’,<br>    sayHi: function() {<br>        console.log(‘hi~’);<br>    }<br>}</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">* 里面的属性与方法采用键值对的形式 键 属性名 : 值 属性值</span><br><span class="line">* 中间由,隔开</span><br><span class="line">* 方法冒号后跟一个匿名函数</span><br><span class="line">* 调用对象属性,我们采用 对象名.属性名</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>console.log(obj.uname);</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">* 对象名[&#x27;属性名&#x27;]</span><br></pre></td></tr></table></figure>
-<p>console.log(obj[‘uname’]);</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">*  调用对象的方法 对象名.方法名()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>obj.sayHi();</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">*  变量与属性:都是用来存储数据,不同的是变量单独声明并赋值,单独存在;属性在对象里面,无需声明且使用时不可脱离对象</span><br><span class="line">*  函数和方法: 都是实现某种功能,不同的是函数单独声明,单独存在;方法在对象里面,调用时不可脱离对象</span><br><span class="line">* new Object</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>var obj &#x3D; new Object();<br>obj.uname &#x3D; ‘xiaochou’;<br>obj.age &#x3D; 18;<br>obj.sex &#x3D; ‘男’;<br>obj.sayHi &#x3D; function() {<br>        console.log(‘hi~’);<br>    }</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 利用等号赋值添加属性与方法;</span><br><span class="line">* 中间用;隔开</span><br><span class="line">* 调用跟前面一致</span><br><span class="line">* 构造函数: 因为前面两种方式一次只能创建一个对象,里面很多属性方法相似,封装到函数里面,即将对象里面相同的属性与方法抽象出来封装到函数里面</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function fu() &#123;</span><br><span class="line">    num = 20;</span><br><span class="line">    console.log(num);</span><br><span class="line">&#125;</span><br><span class="line">console.log(num);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>es5 没有块级作用域,es6才有</li>
+<li>块级作用域{}</li>
+<li>作用域链: 根据内部函数可以访问外部函数的机制,用链式查找决定那些数据能被内部函数访问(就近原则)</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function f1() &#123;</span><br><span class="line">    var num = 123;</span><br><span class="line">    function f2() &#123;</span><br><span class="line">        console.log(num);</span><br><span class="line">    &#125;</span><br><span class="line">    f2();</span><br><span class="line">&#125;</span><br><span class="line">var num = 456;</span><br><span class="line">f1(); //123 </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>js运行代码时分为两步: 预解析,代码执行</li>
+<li>预解析: js引擎会把js里面所有var ,function,提升到当前作用域的最前面 </li>
+<li>代码执行: 按照代码书写顺序从上往下执行</li>
+<li>预解析分为: 变量预解析(变量提升);函数预解析(函数提升)</li>
+<li>变量提升: 将变量声明提升至当前作用域最前面,不提升赋值操作</li>
+<li>函数提升: 函数声明提升,不调用函数;</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">f1();</span><br><span class="line">console.log(c);</span><br><span class="line">console.log(b);</span><br><span class="line">console.log(a);</span><br><span class="line"></span><br><span class="line">function f1() &#123;</span><br><span class="line">    var a = b = c = 9;</span><br><span class="line">    console.log(a);</span><br><span class="line">    console.log(b);</span><br><span class="line">    console.log(c);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">// 代码相当于</span><br><span class="line">function f1() &#123;</span><br><span class="line">    var a;</span><br><span class="line">    a = b = c = 9; // 此处bc只赋值没声明,为全局变量</span><br><span class="line">    console.log(a);</span><br><span class="line">    console.log(b);</span><br><span class="line">    console.log(c);</span><br><span class="line">&#125;</span><br><span class="line">f1();</span><br><span class="line">console.log(c);</span><br><span class="line">console.log(b);</span><br><span class="line">console.log(a); //报错</span><br></pre></td></tr></table></figure>
+
+<h2 id="八-对象"><a href="#八-对象" class="headerlink" title="八. 对象"></a>八. 对象</h2><ul>
+<li>对象: 无序的相关属性和方法的集合,由属性和方法组成</li>
+<li>创建方法: 字面量;new Object;构造函数</li>
+<li>字面量:{}里面包含了这个具体事务的属性与方法(名词与动词)</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">    uname: &#x27;xiaochou&#x27;,</span><br><span class="line">    age: 18,</span><br><span class="line">    sex: &#x27;男&#x27;,</span><br><span class="line">    sayHi: function() &#123;</span><br><span class="line">        console.log(&#x27;hi~&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>里面的属性与方法采用键值对的形式 键 属性名 : 值 属性值</li>
+<li>中间由,隔开</li>
+<li>方法冒号后跟一个匿名函数</li>
+<li>调用对象属性,我们采用 对象名.属性名</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">console.log(obj.uname);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>对象名[‘属性名’]</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">console.log(obj[&#x27;uname&#x27;]);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调用对象的方法 对象名.方法名()</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">obj.sayHi();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>变量与属性:都是用来存储数据,不同的是变量单独声明并赋值,单独存在;属性在对象里面,无需声明且使用时不可脱离对象</li>
+<li>函数和方法: 都是实现某种功能,不同的是函数单独声明,单独存在;方法在对象里面,调用时不可脱离对象</li>
+<li>new Object</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var obj = new Object();</span><br><span class="line">obj.uname = &#x27;xiaochou&#x27;;</span><br><span class="line">obj.age = 18;</span><br><span class="line">obj.sex = &#x27;男&#x27;;</span><br><span class="line">obj.sayHi = function() &#123;</span><br><span class="line">        console.log(&#x27;hi~&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">```            </span><br><span class="line">* 利用等号赋值添加属性与方法;</span><br><span class="line">* 中间用;隔开</span><br><span class="line">* 调用跟前面一致</span><br><span class="line">* 构造函数: 因为前面两种方式一次只能创建一个对象,里面很多属性方法相似,封装到函数里面,即将对象里面相同的属性与方法抽象出来封装到函数里面</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>function Star(uname, age, sex) { &#x2F;&#x2F; 构造函数名首字母大写<br>    this.name &#x3D; uname; &#x2F;&#x2F; 属性与方法前面必须加this<br>    this.age &#x3D; age;<br>    this.sex &#x3D; sex; &#x2F;&#x2F; 无需return就可以返回结果<br>}<br>var xc &#x3D; new Star(‘xiaochou’, 18, ‘男’); &#x2F;&#x2F; 调用构造函数必须写new<br>console.log(typeof xc); &#x2F;&#x2F; 调用函数返回一个对象<br>console.log(xc.name);</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">*  对象与构造函数的区别: 构造函数泛指某一大类;对象特指一个具体的事物</span><br><span class="line">*  利用构造函数创建对象的过程也称为对象的实例化,通过关键字new</span><br><span class="line">*  new 关键字</span><br><span class="line">* 首先在内存里面创建一个空的对象,this会指向这个对象,执行构造函数里面的代码,给空对象添加属性与方法,最后返回这个对象,无需return</span><br><span class="line">*  遍历对象</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>var obj &#x3D; {<br>    name: ‘xioacou’,<br>    age: 18,<br>    sex: ‘男’<br>}<br>for (k in obj) {<br>    console.log(k); &#x2F;&#x2F; k为变量,输出得到属性名<br>    console.log(obj.k); &#x2F;&#x2F; obj[k]得到的是属性值<br>}<br>&#x2F;&#x2F;使用for.. in 一般使用k 或者 key</p>
