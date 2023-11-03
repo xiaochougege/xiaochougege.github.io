@@ -393,10 +393,10 @@
 <ul>
 <li>交换两个变量的值</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var apple1 = &#x27;红苹果&#x27;;</span><br><span class="line">        var apple2 = &#x27;青苹果&#x27;;</span><br><span class="line">        var temp;</span><br><span class="line">        temp = apple1;</span><br><span class="line">        apple1 = apple2;</span><br><span class="line">        apple2 = temp;</span><br><span class="line">        console.log(apple1);</span><br><span class="line">        console.log(apple2);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var apple1 = &#x27;红苹果&#x27;;</span><br><span class="line">var apple2 = &#x27;青苹果&#x27;;</span><br><span class="line">var temp;</span><br><span class="line">temp = apple1;</span><br><span class="line">apple1 = apple2;</span><br><span class="line">apple2 = temp;</span><br><span class="line">console.log(apple1);</span><br><span class="line">console.log(apple2);</span><br></pre></td></tr></table></figure>
 
 <h2 id="二-数据类型"><a href="#二-数据类型" class="headerlink" title="二. 数据类型"></a>二. 数据类型</h2><p>js变量的数据类型是只有程序在运行过程中根据等号右边的值来确定的。同时js具有动态类型，相同的变量可用作不同类型。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var x = 10;</span><br><span class="line">        x = &#x27;xiaochou&#x27;;</span><br><span class="line">        console.log(x);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var x = 10;</span><br><span class="line">x = &#x27;xiaochou&#x27;;</span><br><span class="line">console.log(x);</span><br></pre></td></tr></table></figure>
 <p>js数据类型分为两大类:</p>
 <ol>
 <li><p>简单数据类型(Mumber, String,Boolean,Undefined,Null);</p>
@@ -418,7 +418,7 @@
 </ol>
 </li>
 <li><p>简单案例</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var day = prompt(&#x27;你是什么时候出生的?&#x27;); //返回字符串型</span><br><span class="line">    var days = parseInt(day);</span><br><span class="line">    days = 2023 - days;</span><br><span class="line">    alert(&#x27;你今年&#x27; + days + &#x27;岁&#x27;);</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var day = prompt(&#x27;你是什么时候出生的?&#x27;); //返回字符串型</span><br><span class="line">var days = parseInt(day);</span><br><span class="line">days = 2023 - days;</span><br><span class="line">alert(&#x27;你今年&#x27; + days + &#x27;岁&#x27;);</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="三-运算符"><a href="#三-运算符" class="headerlink" title="三. 运算符"></a>三. 运算符</h2><ul>
 <li>(操作符)—–&gt;(+ - * &#x2F;)</li>
@@ -429,7 +429,7 @@
 <li>比较运算符(关系运算符),返回布尔值</li>
 <li>逻辑运算符(&amp;&amp; 与；||或；!非)</li>
 <li>赋值运算符(&#x3D; +&#x3D; -&#x3D;)</li>
-<li>优先级:(),一元运算符,算数运算符,关系运算符,相等运算符,逻辑运算符,赋值运算符,逗号运算符<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">console.log(133 &amp;&amp; 234); //逻辑中断:左真则返回右;左假返回左;</span><br><span class="line">        console.log(123 || 345); //逻辑中断:左真返回左,左假返回右,与上面相反</span><br><span class="line">        var num = 0;</span><br><span class="line">        console.log(123 || num++); //123为真,输出123,num++不执行</span><br><span class="line">        console.log(num); //返回0</span><br></pre></td></tr></table></figure></li>
+<li>优先级:(),一元运算符,算数运算符,关系运算符,相等运算符,逻辑运算符,赋值运算符,逗号运算符<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">console.log(133 &amp;&amp; 234); //逻辑中断:左真则返回右;左假返回左;</span><br><span class="line">console.log(123 || 345); //逻辑中断:左真返回左,左假返回右,与上面相反</span><br><span class="line">var num = 0;</span><br><span class="line">console.log(123 || num++); //123为真,输出123,num++不执行</span><br><span class="line">console.log(num); //返回0</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="四-流程控制"><a href="#四-流程控制" class="headerlink" title="四. 流程控制"></a>四. 流程控制</h2><ul>
 <li>if switch 三元表达式</li>
@@ -437,11 +437,11 @@
 <li>三元表达式 条件 ? 结果1 : 结果2  </li>
 <li>if-else与switch区别:switch用于比较确定值,if-else用于判断范围。</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var time = prompt(&#x27;请输入一个随机数字:&#x27;)</span><br><span class="line">        var result = time &lt; 10 ? &#x27;0&#x27; + time : time;</span><br><span class="line">        alert(result);</span><br><span class="line">        //switch-case-break-default  执行思路:匹配</span><br><span class="line">        var fruit = prompt(&#x27;请你输入水果名称:&#x27;);</span><br><span class="line">        switch (fruit) &#123;</span><br><span class="line">            case &#x27;苹果&#x27;:</span><br><span class="line">                alert(&#x27;苹果价格35元&#x27;);</span><br><span class="line">                break;</span><br><span class="line">            case &#x27;香蕉&#x27;:</span><br><span class="line">                alert(&#x27;香蕉价格20元&#x27;);</span><br><span class="line">                break;</span><br><span class="line">            default:</span><br><span class="line">                alert(&#x27;没有该种水果&#x27;);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var time = prompt(&#x27;请输入一个随机数字:&#x27;)</span><br><span class="line">var result = time &lt; 10 ? &#x27;0&#x27; + time : time;</span><br><span class="line">alert(result);</span><br><span class="line">//switch-case-break-default  执行思路:匹配</span><br><span class="line">var fruit = prompt(&#x27;请你输入水果名称:&#x27;);</span><br><span class="line">switch (fruit) &#123;</span><br><span class="line">    case &#x27;苹果&#x27;:</span><br><span class="line">        alert(&#x27;苹果价格35元&#x27;);</span><br><span class="line">        break;</span><br><span class="line">    case &#x27;香蕉&#x27;:</span><br><span class="line">        alert(&#x27;香蕉价格20元&#x27;);</span><br><span class="line">        break;</span><br><span class="line">    default:</span><br><span class="line">        alert(&#x27;没有该种水果&#x27;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>案例</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for (i = 1; i &lt;= 100; i++) &#123;</span><br><span class="line">            console.log(&#x27;啊哈哈&#x27;);</span><br><span class="line">        &#125;</span><br><span class="line">        //1.求1-100之间所有数都平均值</span><br><span class="line">        var sum = 0;</span><br><span class="line">        for (i = 0; i &lt;= 100; i++) &#123;</span><br><span class="line">            sum += i;</span><br><span class="line">        &#125;</span><br><span class="line">        var even = sum / 100;</span><br><span class="line">        console.log(even);</span><br><span class="line">        // 2.求1-100站之间所有偶数的平均值</span><br><span class="line">        var sum = 0;</span><br><span class="line">        var cout = 0;</span><br><span class="line">        for (j = 0; j &lt;= 100; j++) &#123;</span><br><span class="line">            if (j % 2 == 0) &#123;</span><br><span class="line">                sum += j;</span><br><span class="line">                cout++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        var ou = sum / cout;</span><br><span class="line">        console.log(ou);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for (i = 1; i &lt;= 100; i++) &#123;</span><br><span class="line">    console.log(&#x27;啊哈哈&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">//1.求1-100之间所有数都平均值</span><br><span class="line">var sum = 0;</span><br><span class="line">for (i = 0; i &lt;= 100; i++) &#123;</span><br><span class="line">    sum += i;</span><br><span class="line">&#125;</span><br><span class="line">var even = sum / 100;</span><br><span class="line">console.log(even);</span><br><span class="line">// 2.求1-100站之间所有偶数的平均值</span><br><span class="line">var sum = 0;</span><br><span class="line">var cout = 0;</span><br><span class="line">for (j = 0; j &lt;= 100; j++) &#123;</span><br><span class="line">    if (j % 2 == 0) &#123;</span><br><span class="line">        sum += j;</span><br><span class="line">        cout++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var ou = sum / cout;</span><br><span class="line">console.log(ou);</span><br></pre></td></tr></table></figure>
 <h2 id="五-数组"><a href="#五-数组" class="headerlink" title="五. 数组"></a>五. 数组</h2><p>所谓数组,即一组数据的集合,存储在单个变量下。<br>在js中，创建数组有以下几种方式：</p>
 <ol>
 <li>new关键字创建;</li>
@@ -454,7 +454,7 @@
 <ul>
 <li>数组长度 数组名.length</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var arr = [44, 23.4, 2.4, 4, 25, 2, 34];</span><br><span class="line">        for (var i = 1; i &lt; arr.length; i++) &#123;</span><br><span class="line">            console.log(arr[i]);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var arr = [44, 23.4, 2.4, 4, 25, 2, 34];</span><br><span class="line">for (var i = 1; i &lt; arr.length; i++) &#123;</span><br><span class="line">    console.log(arr[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>求最值</li>
 </ul>
@@ -513,11 +513,19 @@
 <li>注意: 函数内部没有声明字节赋值使用的变量也于全局变量;函数的形参可以看作局部变量</li>
 <li>全局变量只有浏览器关闭的时候才会销毁,比较内存;局部变量当程序执行完毕时销毁,节约内存。</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function fu() &#123;</span><br><span class="line">    num = 20;</span><br><span class="line">    console.log(num);</span><br><span class="line">&#125;</span><br><span class="line">console.log(num);</span><br><span class="line">``````   </span><br><span class="line">* es5 没有块级作用域,es6才有</span><br><span class="line">* 块级作用域&#123;&#125;</span><br><span class="line">* 作用域链: 根据内部函数可以访问外部函数的机制,用链式查找决定那些数据能被内部函数访问(就近原则)  </span><br><span class="line">```</span><br><span class="line">function f1() &#123;</span><br><span class="line">    var num = 123;</span><br><span class="line">    function f2() &#123;</span><br><span class="line">        console.log(num);</span><br><span class="line">    &#125;</span><br><span class="line">    f2();</span><br><span class="line">&#125;</span><br><span class="line">var num = 456;</span><br><span class="line">f1(); //123 </span><br><span class="line">```</span><br><span class="line">* js运行代码时分为两步: 预解析,代码执行</span><br><span class="line">* 预解析: js引擎会把js里面所有var ,function,提升到当前作用域的最前面 </span><br><span class="line">* 代码执行: 按照代码书写顺序从上往下执行</span><br><span class="line">* 预解析分为: 变量预解析(变量提升);函数预解析(函数提升)</span><br><span class="line">* 变量提升: 将变量声明提升至当前作用域最前面,不提升赋值操作</span><br><span class="line">* 函数提升: 函数声明提升,不调用函数; </span><br><span class="line"></span><br><span class="line">```</span><br><span class="line">f1();</span><br><span class="line">console.log(c);</span><br><span class="line">console.log(b);</span><br><span class="line">console.log(a);</span><br><span class="line"></span><br><span class="line">function f1() &#123;</span><br><span class="line">    var a = b = c = 9;</span><br><span class="line">    console.log(a);</span><br><span class="line">    console.log(b);</span><br><span class="line">    console.log(c);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">// 代码相当于</span><br><span class="line">function f1() &#123;</span><br><span class="line">    var a;</span><br><span class="line">    a = b = c = 9; // 此处bc只赋值没声明,为全局变量</span><br><span class="line">    console.log(a);</span><br><span class="line">    console.log(b);</span><br><span class="line">    console.log(c);</span><br><span class="line">&#125;</span><br><span class="line">f1();</span><br><span class="line">console.log(c);</span><br><span class="line">console.log(b);</span><br><span class="line">console.log(a); //报错</span><br><span class="line">```</span><br><span class="line"></span><br><span class="line">## 八. 对象</span><br><span class="line">* 对象: 无序的相关属性和方法的集合,由属性和方法组成</span><br><span class="line">* 创建方法: 字面量;new Object;构造函数</span><br><span class="line">* 字面量:&#123;&#125;里面包含了这个具体事务的属性与方法(名词与动词)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function fu() &#123;</span><br><span class="line">    num = 20;</span><br><span class="line">    console.log(num);</span><br><span class="line">&#125;</span><br><span class="line">console.log(num);</span><br><span class="line">```   </span><br><span class="line">* es5 没有块级作用域,es6才有</span><br><span class="line">* 块级作用域&#123;&#125;</span><br><span class="line">* 作用域链: 根据内部函数可以访问外部函数的机制,用链式查找决定那些数据能被内部函数访问(就近原则)  </span><br></pre></td></tr></table></figure>
+<p>function f1() {<br>    var num &#x3D; 123;<br>    function f2() {<br>        console.log(num);<br>    }<br>    f2();<br>}<br>var num &#x3D; 456;<br>f1(); &#x2F;&#x2F;123 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* js运行代码时分为两步: 预解析,代码执行</span><br><span class="line">* 预解析: js引擎会把js里面所有var ,function,提升到当前作用域的最前面 </span><br><span class="line">* 代码执行: 按照代码书写顺序从上往下执行</span><br><span class="line">* 预解析分为: 变量预解析(变量提升);函数预解析(函数提升)</span><br><span class="line">* 变量提升: 将变量声明提升至当前作用域最前面,不提升赋值操作</span><br><span class="line">* 函数提升: 函数声明提升,不调用函数; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>f1();<br>console.log(c);<br>console.log(b);<br>console.log(a);</p>
+<p>function f1() {<br>    var a &#x3D; b &#x3D; c &#x3D; 9;<br>    console.log(a);<br>    console.log(b);<br>    console.log(c);</p>
+<p>}<br>&#x2F;&#x2F; 代码相当于<br>function f1() {<br>    var a;<br>    a &#x3D; b &#x3D; c &#x3D; 9; &#x2F;&#x2F; 此处bc只赋值没声明,为全局变量<br>    console.log(a);<br>    console.log(b);<br>    console.log(c);<br>}<br>f1();<br>console.log(c);<br>console.log(b);<br>console.log(a); &#x2F;&#x2F;报错</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## 八. 对象</span><br><span class="line">* 对象: 无序的相关属性和方法的集合,由属性和方法组成</span><br><span class="line">* 创建方法: 字面量;new Object;构造函数</span><br><span class="line">* 字面量:&#123;&#125;里面包含了这个具体事务的属性与方法(名词与动词)</span><br></pre></td></tr></table></figure>
 <p>var obj &#x3D; {<br>    uname: ‘xiaochou’,<br>    age: 18,<br>    sex: ‘男’,<br>    sayHi: function() {<br>        console.log(‘hi~’);<br>    }<br>}</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 里面的属性与方法采用键值对的形式 键 属性名 : 值 属性值</span><br><span class="line">* 中间由,隔开</span><br><span class="line">* 方法冒号后跟一个匿名函数</span><br><span class="line">* 调用对象属性,我们采用 对象名.属性名</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>console.log(obj.uname);</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 对象名[&#x27;属性名&#x27;]</span><br><span class="line">```</span><br><span class="line">console.log(obj[&#x27;uname&#x27;]);</span><br><span class="line">```</span><br><span class="line">*  调用对象的方法 对象名.方法名()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 对象名[&#x27;属性名&#x27;]</span><br></pre></td></tr></table></figure>
+<p>console.log(obj[‘uname’]);</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*  调用对象的方法 对象名.方法名()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>obj.sayHi();</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*  变量与属性:都是用来存储数据,不同的是变量单独声明并赋值,单独存在;属性在对象里面,无需声明且使用时不可脱离对象</span><br><span class="line">*  函数和方法: 都是实现某种功能,不同的是函数单独声明,单独存在;方法在对象里面,调用时不可脱离对象</span><br><span class="line">* new Object</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>var obj &#x3D; new Object();<br>obj.uname &#x3D; ‘xiaochou’;<br>obj.age &#x3D; 18;<br>obj.sex &#x3D; ‘男’;<br>obj.sayHi &#x3D; function() {<br>        console.log(‘hi~’);<br>    }</p>
@@ -564,7 +572,7 @@ console.log(arr[0]);
 <p>var str3 &#x3D; ‘hwifioewfowjfwpfu’;<br>while (str3.indexOf(‘o’) !&#x3D;&#x3D; -1) {<br>    str3 &#x3D; str3.replace(‘o’, ‘*’);<br>}<br>console.log(str3)</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 字符转化为数组 split(&#x27;分隔符&#x27;)</span><br><span class="line">* 数组转换为字符 join(&#x27;分隔符&#x27;)</span><br><span class="line">* 简单数据类型: 值类型,即存储时变量储存但是值本身(string,number,boolean,undifined,null)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>var timer &#x3D; null;<br>console.log(typeof timer); &#x2F;&#x2F; null比较特殊,返回object,即一个空的对象</p>
-<p>&#96;&#96;&#96;&#96;&#96;&#96;</p>
+<p>&#96;&#96;&#96;</p>
 <ul>
 <li>这是一个设计时留下的bug,如果有个变量打算以后储存为对象,暂时没想好,就给null</li>
 <li>栈: 操作系统自动分配释放存放函数的参数值,一般放置简单数据类型</li>
@@ -572,7 +580,7 @@ console.log(arr[0]);
 <li>内存分配: 简单数据类型存放到栈里面,开辟一个空间存放的为值,变量名指向该值;</li>
 <li>复杂数据类型首先在栈里存放地址(十六进制表示),变量名指向该地址,地址指向存放在堆中的数值</li>
 <li>简单数据类型传参: 传参时将变量在栈空间里面的值复制一份给形参,对形参的任何修改都不会影响外部变量</li>
-<li>复杂数据类型传参:  传参时将变量在栈空间里保存的地址复制给形参,形参与实参为同一地址,所以操作的是同一对象.</li>
+<li>复杂数据类型传参:  传参时将变量在栈空间里保存的地址复制给形参,形参与实参为同一地址,所以操作的是同一对象。</li>
 </ul>
 ]]></content>
       <tags>
