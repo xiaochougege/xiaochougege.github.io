@@ -6,7 +6,7 @@
   <link href="http://xiaochougege.github.io/atom.xml" rel="self"/>
   
   <link href="http://xiaochougege.github.io/"/>
-  <updated>2023-09-27T12:52:47.817Z</updated>
+  <updated>2023-11-03T04:55:44.335Z</updated>
   <id>http://xiaochougege.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://xiaochougege.github.io/archives/0.html"/>
-    <id>http://xiaochougege.github.io/archives/0.html</id>
-    <published>2023-09-27T12:25:35.818Z</published>
-    <updated>2023-09-27T12:52:47.817Z</updated>
+    <title>简易Markdown笔记</title>
+    <link href="http://xiaochougege.github.io/archives/f823f2bf.html"/>
+    <id>http://xiaochougege.github.io/archives/f823f2bf.html</id>
+    <published>2023-11-03T00:11:50.000Z</published>
+    <updated>2023-11-03T04:55:44.335Z</updated>
     
     
       
@@ -34,6 +34,31 @@
     
     
     
+    
+    <category term="Markdown" scheme="http://xiaochougege.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>指针</title>
+    <link href="http://xiaochougege.github.io/archives/73608288.html"/>
+    <id>http://xiaochougege.github.io/archives/73608288.html</id>
+    <published>2023-10-10T17:01:18.000Z</published>
+    <updated>2023-10-10T09:30:33.090Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="c语言" scheme="http://xiaochougege.github.io/tags/c%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
