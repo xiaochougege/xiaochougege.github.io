@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>归档: 2023/11 |  人醉梦亦碎</title>
+      <title>DOM基础(一) |  人醉梦亦碎</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -60,110 +60,289 @@
       
     <main class="content on">
       <section class="outer">
+  <article
+  id="post-DOM基础-一"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  DOM基础(一)
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/archives/6abe9870.html" class="article-date">
+  <time datetime="2023-11-09T22:30:54.000Z" itemprop="datePublished">2023-11-09</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">442</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">1 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
   
-  <ul class="ads">
-    
-        <li>
-            <a href="">
-                <img src="" width="300" alt="">
-            </a>
-        </li>
-    
-        <li>
-            <a href="">
-                <img src="" width="300" alt="">
-            </a>
-        </li>
-    
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="DOM基础-一"><a href="#DOM基础-一" class="headerlink" title="DOM基础(一)"></a><center>DOM基础(一)</h1><hr>
+<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><ol>
+<li>文档对象模型,简称DOM,是一个标准编程接口;</li>
+<li>DOM方便我们操作HTML;</li>
+<li>DOM使HTML形成了一颗DOM操作树,包括文档,元素,节点;</li>
+<li>通过DOM获取的节点返回的是一个对象(object);</li>
+<li>主要由增删查改,属性操作,元素操作;</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>创建</th>
+<th>增</th>
+<th>删</th>
+<th>改</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>docunment.write</td>
+<td>appendChild</td>
+<td>removeChild</td>
+<td>修改元素属性:src,href,title等</td>
+</tr>
+<tr>
+<td>inner.HTML</td>
+<td>insertBefore</td>
+<td></td>
+<td>修改普通元素内容: innerHTML,innerTest</td>
+</tr>
+<tr>
+<td>createElement</td>
+<td></td>
+<td></td>
+<td>修改表单元素: value,type,disabled</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>修改元素样式: style,className</td>
+</tr>
+</tbody></table>
+<h3 id="查"><a href="#查" class="headerlink" title="查"></a>查</h3><table>
+<thead>
+<tr>
+<th>DOM提供的API方法</th>
+<th>H5新方法</th>
+<th>节点操作元素获取</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>getElementById</td>
+<td>querySelector</td>
+<td>父: parentNode</td>
+</tr>
+<tr>
+<td>getElementByTagName</td>
+<td>querySelectorAll</td>
+<td>子: children</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>兄弟: previousElementSibling</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>兄弟: nextElementSibling</td>
+</tr>
+</tbody></table>
+<h3 id="属性操作"><a href="#属性操作" class="headerlink" title="属性操作"></a>属性操作</h3><p>主要针对自定义属性.</p>
+<ol>
+<li>setAttribute : 设置DOM属性值;</li>
+<li>getAttribute : 得到DOM的属性值;</li>
+<li>removeAttribute: 移除属性;</li>
+</ol>
+<h3 id="事件操作"><a href="#事件操作" class="headerlink" title="事件操作"></a>事件操作</h3><p>给元素注册事件,采取 <mark>事件源.事件类型 &#x3D; 事件处理程序</mark></p>
+<table>
+<thead>
+<tr>
+<th>鼠标事件</th>
+<th>触发条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>onclick</td>
+<td>左键点击</td>
+</tr>
+<tr>
+<td>onmouseover</td>
+<td>经过</td>
+</tr>
+<tr>
+<td>onmouseout</td>
+<td>离开</td>
+</tr>
+<tr>
+<td>onfocus</td>
+<td>获得焦点</td>
+</tr>
+<tr>
+<td>onblur</td>
+<td>失去焦点</td>
+</tr>
+<tr>
+<td>onmousemove</td>
+<td>鼠标移动</td>
+</tr>
+<tr>
+<td>onmouseseup</td>
+<td>鼠标弹起</td>
+</tr>
+<tr>
+<td>onmousesedown</td>
+<td>鼠标按下</td>
+</tr>
+</tbody></table>
+<h3 id="动态创建元素"><a href="#动态创建元素" class="headerlink" title="动态创建元素"></a>动态创建元素</h3><ul>
+<li>document.write() <ul>
+<li>文档流执行完毕后页面重绘</li>
 </ul>
-  
-  
-  <article class="articles">
-    
-    
-    <h1 class="page-type-title">2023/11</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2023" class="archive-year">2023</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/archives/6abe9870.html" class="archive-article-date">
-  <time datetime="2023-11-09T22:30:54.000Z" itemprop="datePublished">11/09</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/archives/6abe9870.html"
-    >DOM基础(一)</a> 
-</h2>
- 
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var btn = document.querySelector(&#x27;button&#x27;);</span><br><span class="line">btn.onclick = function()&#123;</span><br><span class="line">    document.write(&#x27;&lt;div&gt;&lt;/div&gt;&#x27;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/archives/a6506496.html" class="archive-article-date">
-  <time datetime="2023-11-03T19:36:32.000Z" itemprop="datePublished">11/03</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/archives/a6506496.html"
-    >JavaScript基础语法笔记</a> 
-</h2>
- 
+<ul>
+<li><p>element.innerHTML</p>
+<ul>
+<li>拼接字符串效率较低</li>
+<li>将内容写入某个DOM节点,不会导致页面全部重绘</li>
+<li>创建多个元素效率更高(非拼接字符串,采用数组形式),结构稍微复杂<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [];</span><br><span class="line">for (var i = 0; i &lt; 100; i++&gt;)&#123;</span><br><span class="line">    arr.push(&#x27;&lt;div&gt;&lt;/div&gt;&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">inner.HTML = arr.join(&#x27;&#x27;);</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>document.createElement()</p>
+<ul>
+<li>创建多个元素效率低一点点,结构清晰</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var create = document.querySelector(&#x27;.create&#x27;);</span><br><span class="line">for (var i = 0 ; i &lt; 100; i++)&#123;</span><br><span class="line">    var a = doocument.createElement(&#x27;a&#x27;);</span><br><span class="line">    create.append(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/archives/f823f2bf.html" class="archive-article-date">
-  <time datetime="2023-11-03T00:11:50.000Z" itemprop="datePublished">11/03</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/archives/f823f2bf.html"
-    >简易Markdown笔记</a> 
-</h2>
- 
 
-    </header>
-    
-    
-  </div>
-</article>
-      
+ 
+      <!-- reward -->
       
     </div>
-  </div>
-  
-  
+    
 
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://xiaochougege.github.io/archives/6abe9870.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/archives/a6506496.html" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">JavaScript基础语法笔记</div>
+      </a>
+    
+  </nav>
+
+   
+ 
+   
   
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -298,6 +477,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
