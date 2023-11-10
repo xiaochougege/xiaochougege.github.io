@@ -941,4 +941,269 @@
         <tag>JS</tag>
       </tags>
   </entry>
+  <entry>
+    <title>DOM基础(二)</title>
+    <url>/archives/c58f0312.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="DOM基础-二"><a href="#DOM基础-二" class="headerlink" title="DOM基础(二)"></a><center>DOM基础(二)</h1><hr>
+<h3 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">graph TB</span><br><span class="line">    A[JavaScript] ---&gt; B((ECMAScript))--JavaScript语法--&gt; E[JavaScript基础]</span><br><span class="line">    A[JavaScript] ---&gt; C((DOM)) --页面文档对象模型--&gt; F[Web APIs]</span><br><span class="line">    A[JavaScript] ---&gt; D((BOM)) --浏览器对象模型--&gt; F[Web APIs]</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="DOM简介"><a href="#DOM简介" class="headerlink" title="DOM简介"></a>DOM简介</h2><p>文档对象模型，简称DOM，是W3C组织推荐的可扩展编程语言（HTML,XML）的标准程序接口。通过这些接口可以改变网页的内容，结构与样式。</p>
+<h2 id="DOM树"><a href="#DOM树" class="headerlink" title="DOM树"></a>DOM树</h2><h2 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h2><ul>
+<li>根据id获取： getElementById()</li>
+<li>根据标签名获取 getElementsByTagName()</li>
+<li>H5新增 getElementsByClassName(‘类名’) 根据类名获取某些元素的集合(div加.id加#)</li>
+<li>H5新增 querySelector(‘选择器’) 返回指定选择器第一个元素对象</li>
+<li>H5新增 querySelectorAll(‘选择器’)  返回指定选择器</li>
+<li>获取body标签 document.body 返回body元素对象</li>
+<li>获取html标签 document.documentElement  返回html元素对象</li>
+</ul>
+<h2 id="事件三要素"><a href="#事件三要素" class="headerlink" title="事件三要素"></a>事件三要素</h2><ul>
+<li>事件源: 事件被触发的对象</li>
+<li>事件类型: 如何触发，什么事件</li>
+<li>事件处理程序： 通过一个函数赋值的形式完成</li>
+</ul>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
+<li>获取事件源</li>
+<li>注册事件(绑定事件)</li>
+<li>添加事件处理程序(采取函数赋值形式)</li>
+</ol>
+<h2 id="操作元素"><a href="#操作元素" class="headerlink" title="操作元素"></a>操作元素</h2><ol>
+<li><p>改变元素内容</p>
+<ul>
+<li>innerText  不识别HTML标签,去除空格与换行</li>
+<li>innerHTML  识别HTML标签,保留空格与换行</li>
+</ul>
+</li>
+<li><p>改变元素属性</p>
+<ul>
+<li><p>src &#x2F; herf</p>
+<ol>
+<li>获取元素</li>
+<li>注册事件</li>
+<li>处理程序 img.src &#x3D; ‘新路径’;</li>
+</ol>
+</li>
+<li><p>title(鼠标经过时显示的信息)</p>
+<ul>
+<li>img.tilte &#x3D; ‘’;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>改变表单属性</p>
+<ul>
+<li>innerHTML不可修改,只针对普通盒子(div)</li>
+<li>.value 修改表单里面的值</li>
+<li>.disabled &#x3D; true 禁用表单,不可点击</li>
+<li>this.disabled &#x3D; true  其中this指向事件函数的调用者</li>
+</ul>
+</li>
+<li><p>改变样式属性</p>
+<ul>
+<li>修改元素大小,位置,颜色</li>
+<li>行内样式操作 element.style</li>
+<li>类名样式操作 element.className</li>
+</ul>
+</li>
+</ol>
+<h3 id="事件注册"><a href="#事件注册" class="headerlink" title="事件注册"></a>事件注册</h3><ul>
+<li>传统方法<ul>
+<li>以on开头的方式</li>
+<li>特点: 注册事件的唯一性</li>
+<li>即同一元素同一事件只能设置一个处理函数,后面会将前面的覆盖</li>
+</ul>
+</li>
+<li>方法监听注册方式<ul>
+<li>addEventListener()是一个方法</li>
+<li>特点: 同一元素同一事件可以设置多个监听器</li>
+<li>按注册顺序依次执行</li>
+<li>里面的事件类型为字符串,必加引号,不带on</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 事件监听注册事件</span><br><span class="line">var btn = document.querySelectorAll(&#x27;button&#x27;);</span><br><span class="line">btn[0].addEventListener(&#x27;click&#x27;,function()&#123;</span><br><span class="line">    alert(&#x27;22&#x27;);</span><br><span class="line">&#125;);</span><br><span class="line">btn[1].addEventListener(&#x27;click&#x27;,function()&#123;</span><br><span class="line">    alert(&#x27;33&#x27;);</span><br><span class="line">&#125;) </span><br></pre></td></tr></table></figure>
+
+<h3 id="删除事件-解绑事件"><a href="#删除事件-解绑事件" class="headerlink" title="删除事件(解绑事件)"></a>删除事件(解绑事件)</h3><ol>
+<li>传统方式删除事件</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">btn[0].onclick = null;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>removeEventListener()</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">btn[0].addEventListener(&#x27;click&#x27;,fn) // 无需小括号</span><br><span class="line">function fn()&#123;</span><br><span class="line">    alert(&#x27;22&#x27;);</span><br><span class="line">    btn[0].removeEventListener(&#x27;click&#x27;,fn);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="DOM事件流"><a href="#DOM事件流" class="headerlink" title="DOM事件流"></a>DOM事件流</h3><p>事件流描述从页面接受事件的顺序,事件发生时会在元素节点之间按照特定顺序传播,这个传播过程即DOM事件流.</p>
+<p>DOM事件流分为三个阶段:</p>
+<ul>
+<li>捕获阶段</li>
+<li>当前目标阶段</li>
+<li>冒泡阶段</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">graph LR</span><br><span class="line">a[Docunment] --&gt; b[Element html]</span><br><span class="line">b[Element html] --&gt; c[Element body]</span><br><span class="line">c --&gt; d[Element div]</span><br><span class="line">a -.-捕获阶段-.-&gt; d</span><br><span class="line">d -.-冒泡阶段-.-&gt; a</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>若addEventListener()的第三个参数为true则为<mark>捕获阶段</mark></li>
+<li>若为false或者省略(默认)则为<mark>冒泡阶段</mark></li>
+</ul>
+<h3 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h3><ol>
+<li>event &#x2F; e为一个事件对象,写在侦听函数形参里面;</li>
+<li>事件对象只有事件存在才有,系统自动创建的</li>
+<li>事件对象是事件的一系列相关数据的集合</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">div.addEventListener(&#x27;click&#x27;,function(event)&#123;</span><br><span class="line">    console.log(&#x27;event&#x27;);</span><br><span class="line">&#125;);</span><br><span class="line">div.addEventListener(&#x27;click&#x27;,function(e)&#123;</span><br><span class="line">    console.log(&#x27;e&#x27;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="事件对象属性与方法"><a href="#事件对象属性与方法" class="headerlink" title="事件对象属性与方法"></a>事件对象属性与方法</h3><ol>
+<li><p>target与this区别</p>
+<ol>
+<li>e.target 返回触发事件的对象(元素);</li>
+<li>this 返回绑定事件的对象(元素);</li>
+<li>currentTarget与this相近;</li>
+</ol>
+</li>
+<li><p>e.type 返回事件行为;</p>
+</li>
+<li><p>阻止默认行为: </p>
+<ol>
+<li><a href="">e.preventDefault()</a>;</li>
+<li>传统方法: <a href="">return false</a>,后面代码不再执行,只适合传统注册方式;</li>
+</ol>
+</li>
+<li><p>阻止事件冒泡: e.stopPropagation();</p>
+</li>
+<li><p>事件委托(代理)</p>
+<ul>
+<li>不是每个子节点单独设置事件监听器,而是事件监听器设置在父节点上,利用冒泡原理影响每一个子节点;</li>
+<li>作用: 只操作了一次DOM,提高程序的性能;</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>案例: 给ul注册事件,利用事件对象target找到当前点击的li,此时世家会冒泡到ul上,ul有注册事件,依旧会触发事件监听器.</p>
+</blockquote>
+<h3 id="鼠标事件"><a href="#鼠标事件" class="headerlink" title="鼠标事件"></a>鼠标事件</h3><ol>
+<li><p>禁止鼠标右键: contextmenu</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docunment.addEventListener(&#x27;contextmenu&#x27;,function(e)&#123;</span><br><span class="line">    e.preventDefault();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>禁止鼠标选中: selectstart</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docunment.addEventListener(&#x27;selectstart&#x27;,function(e)&#123;</span><br><span class="line">    e.preventDefault();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="鼠标事件对象MouseEvent"><a href="#鼠标事件对象MouseEvent" class="headerlink" title="鼠标事件对象MouseEvent"></a>鼠标事件对象MouseEvent</h3><table>
+<thead>
+<tr>
+<th>鼠标事件对象</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>e.clientX</td>
+<td>返回浏览器窗口可视区x坐标</td>
+</tr>
+<tr>
+<td>e.clientY</td>
+<td>返回浏览器窗口可视区y坐标</td>
+</tr>
+<tr>
+<td>e.screenX</td>
+<td>返回鼠标相对电脑屏幕的x坐标</td>
+</tr>
+<tr>
+<td>e.screenY</td>
+<td>返回鼠标相对电脑屏幕的y坐标</td>
+</tr>
+<tr>
+<td>e.pageX</td>
+<td>返回鼠标相对页面文档的x坐标</td>
+</tr>
+<tr>
+<td>e.pageY</td>
+<td>返回鼠标相对页面文档的y坐标</td>
+</tr>
+</tbody></table>
+<h3 id="键盘事件对象"><a href="#键盘事件对象" class="headerlink" title="键盘事件对象"></a>键盘事件对象</h3><table>
+<thead>
+<tr>
+<th>键盘事件</th>
+<th>触发条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>onkeyup</td>
+<td>某个键盘按键被松开</td>
+</tr>
+<tr>
+<td>onketdown</td>
+<td>某个键盘按键被按下</td>
+</tr>
+<tr>
+<td>onkeypress</td>
+<td>按键按下的时候</td>
+</tr>
+</tbody></table>
+<ul>
+<li>区别: keypress不能识别功能键ctrl , shift , 左右箭头等</li>
+<li>执行顺序: keydown,keypress,keyup</li>
+</ul>
+<ol>
+<li>属性: keyCode(返回相应键的ASCII值);</li>
+<li>keyup和keydown不区分大小写;</li>
+<li>keypress区分大小写;</li>
+</ol>
+<h3 id="利用节点层级获取元素"><a href="#利用节点层级获取元素" class="headerlink" title="利用节点层级获取元素"></a>利用节点层级获取元素</h3><ul>
+<li>节点类型: nodeType</li>
+<li>节点名称: nodeName</li>
+<li>节点值: nodeValue</li>
+</ul>
+<h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><ul>
+<li>元素节点: 1</li>
+<li>属性节点: 2</li>
+<li>文本节点: 3 (包括文字,空格,换行等)</li>
+<li><mark>主要操作元素节点</mark></li>
+</ul>
+<h3 id="节点层级"><a href="#节点层级" class="headerlink" title="节点层级"></a>节点层级</h3><ul>
+<li>父节点: parentNode (离元素最近的父节点,没有则返回null)</li>
+<li>子节点: childNodes (所有子节点,存在非元素节点)</li>
+<li>获取所有子元素节点: .children (常用)</li>
+</ul>
+<h3 id="子节点"><a href="#子节点" class="headerlink" title="子节点"></a>子节点</h3><ul>
+<li>.firstchild  —-&gt; 第一个子节点(存在非元素节点)</li>
+<li>.firstElementChild —-&gt; 返回第一个子元素节点</li>
+<li>.lastElementChild  —-&gt; 返回最后一个子元素节点</li>
+<li>.children[n-1] —&gt; 没有兼容性问题</li>
+</ul>
+<h3 id="兄弟节点"><a href="#兄弟节点" class="headerlink" title="兄弟节点"></a>兄弟节点</h3><ul>
+<li>.nextSibling (下一个兄弟节点)</li>
+<li>.previousSibling  (上一个兄弟节点)</li>
+<li>.nextElementSibling —-&gt; 下一个元素兄弟节点</li>
+<li>.previousElementSibling —&gt; 上一个元素节点</li>
+</ul>
+<h3 id="创建节点"><a href="#创建节点" class="headerlink" title="创建节点"></a>创建节点</h3><ul>
+<li>document.createElement(‘’);  动态创建元素节点</li>
+</ul>
+<h3 id="添加节点"><a href="#添加节点" class="headerlink" title="添加节点"></a>添加节点</h3><ul>
+<li>node.appendChild(child); <ul>
+<li>将一个节点添加到指定父节点的子节点列表的末尾,类似css中的after伪元素</li>
+<li>其中node为父级,child为子级</li>
+<li>后面追加元素,类似数组的push()</li>
+</ul>
+</li>
+<li>node.insertBefore(child,指定元素)   —-&gt; 在前面追加元素节点</li>
+</ul>
+<h3 id="顺序"><a href="#顺序" class="headerlink" title="顺序"></a>顺序</h3><p>先创建元素再添加元素</p>
+<h3 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h3><ul>
+<li>node.removeChild(child);   返回删除的子节点<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var btn = document.querySelector(&#x27;button&#x27;);</span><br><span class="line">var ul = document.querySelector(&#x27;ul&#x27;);</span><br><span class="line">btn.onclick = function()&#123;</span><br><span class="line">    if (ul.children.length == 0)&#123;</span><br><span class="line">        this.disable = 0;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        ul.removeChild(ul.children[o]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="复制节点"><a href="#复制节点" class="headerlink" title="复制节点"></a>复制节点</h3><ul>
+<li>node.cloneNode()   括号为空为浅拷贝,只复制节点不复制内容</li>
+<li>括号为true则为深拷贝,全部复制</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var ul = document.querySelector(&#x27;ul&#x27;);</span><br><span class="line">var lili = ul.children[0].cloneNode(true);</span><br><span class="line">ul.appendChild(lili);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+  </entry>
 </search>
