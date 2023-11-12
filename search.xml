@@ -945,7 +945,10 @@
     <title>DOM基础(二)</title>
     <url>/archives/c58f0312.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="DOM基础-二"><a href="#DOM基础-二" class="headerlink" title="DOM基础(二)"></a><center>DOM基础(二)</h1><hr>
-<h3 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">graph TB</span><br><span class="line">    A[JavaScript] ---&gt; B((ECMAScript))--JavaScript语法--&gt; E[JavaScript基础]</span><br><span class="line">    A[JavaScript] ---&gt; C((DOM)) --页面文档对象模型--&gt; F[Web APIs]</span><br><span class="line">    A[JavaScript] ---&gt; D((BOM)) --浏览器对象模型--&gt; F[Web APIs]</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h3><pre class="mermaid">graph TB
+    A[JavaScript] ---> B((ECMAScript))--JavaScript语法--> E[JavaScript基础]
+    A[JavaScript] ---> C((DOM)) --页面文档对象模型--> F[Web APIs]
+    A[JavaScript] ---> D((BOM)) --浏览器对象模型--> F[Web APIs]</pre>
 <h2 id="DOM简介"><a href="#DOM简介" class="headerlink" title="DOM简介"></a>DOM简介</h2><p>文档对象模型，简称DOM，是W3C组织推荐的可扩展编程语言（HTML,XML）的标准程序接口。通过这些接口可以改变网页的内容，结构与样式。</p>
 <h2 id="DOM树"><a href="#DOM树" class="headerlink" title="DOM树"></a>DOM树</h2><h2 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h2><ul>
 <li>根据id获取： getElementById()</li>
@@ -1039,7 +1042,12 @@
 <li>当前目标阶段</li>
 <li>冒泡阶段</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">graph LR</span><br><span class="line">a[Docunment] --&gt; b[Element html]</span><br><span class="line">b[Element html] --&gt; c[Element body]</span><br><span class="line">c --&gt; d[Element div]</span><br><span class="line">a -.-捕获阶段-.-&gt; d</span><br><span class="line">d -.-冒泡阶段-.-&gt; a</span><br></pre></td></tr></table></figure>
+<pre class="mermaid">graph LR
+a[Docunment] --> b[Element html]
+b[Element html] --> c[Element body]
+c --> d[Element div]
+a -.-捕获阶段-.-> d
+d -.-冒泡阶段-.-> a</pre>
 
 <ul>
 <li>若addEventListener()的第三个参数为true则为<mark>捕获阶段</mark></li>
@@ -1205,5 +1213,8 @@
 
 
 ]]></content>
+      <tags>
+        <tag>JS</tag>
+      </tags>
   </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="http://xiaochougege.github.io/atom.xml" rel="self"/>
   
   <link href="http://xiaochougege.github.io/"/>
-  <updated>2023-11-10T14:21:34.494Z</updated>
+  <updated>2023-11-12T15:09:37.427Z</updated>
   <id>http://xiaochougege.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://xiaochougege.github.io/archives/c58f0312.html"/>
     <id>http://xiaochougege.github.io/archives/c58f0312.html</id>
     <published>2023-11-10T22:12:41.000Z</published>
-    <updated>2023-11-10T14:21:34.494Z</updated>
+    <updated>2023-11-12T15:09:37.427Z</updated>
     
     
       
@@ -34,6 +34,8 @@
     
     
     
+    
+    <category term="JS" scheme="http://xiaochougege.github.io/tags/JS/"/>
     
   </entry>
   
