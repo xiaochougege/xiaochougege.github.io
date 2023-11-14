@@ -6,7 +6,7 @@
   <link href="http://xiaochougege.github.io/atom.xml" rel="self"/>
   
   <link href="http://xiaochougege.github.io/"/>
-  <updated>2023-11-12T15:09:37.427Z</updated>
+  <updated>2023-11-14T13:07:19.640Z</updated>
   <id>http://xiaochougege.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>炫酷旋转式个人名片</title>
+    <link href="http://xiaochougege.github.io/archives/3b912899.html"/>
+    <id>http://xiaochougege.github.io/archives/3b912899.html</id>
+    <published>2023-11-14T19:20:29.000Z</published>
+    <updated>2023-11-14T13:07:19.640Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="demo" scheme="http://xiaochougege.github.io/tags/demo/"/>
+    
+  </entry>
   
   <entry>
     <title>DOM基础(二)</title>
